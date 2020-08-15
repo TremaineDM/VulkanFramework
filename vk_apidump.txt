@@ -1,0 +1,1652 @@
+Thread 0, Frame 0:
+vkCreateInstance(pCreateInfo, pAllocator, pInstance) returns VkResult VK_SUCCESS (0):
+    pCreateInfo:                    const VkInstanceCreateInfo* = 0000002C5CD5F050:
+        sType:                          VkStructureType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO (1)
+        pNext:                          VkDebugUtilsMessengerCreateInfoEXT = 0000002C5CD5F288:
+            sType:                          VkStructureType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT (1000128004)
+            pNext:                          const void* = NULL
+            flags:                          VkDebugUtilsMessengerCreateFlagsEXT = 0
+            messageSeverity:                VkDebugUtilsMessageSeverityFlagsEXT = 4353 (VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT)
+            messageType:                    VkDebugUtilsMessageTypeFlagsEXT = 7 (VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT)
+            pfnUserCallback:                PFN_vkDebugUtilsMessengerCallbackEXT = 00007FF73F1D65F4
+            pUserData:                      void* = NULL
+        flags:                          VkInstanceCreateFlags = 0
+        pApplicationInfo:               const VkApplicationInfo* = 0000002C5CD5F1D8:
+            sType:                          VkStructureType = VK_STRUCTURE_TYPE_APPLICATION_INFO (0)
+            pNext:                          const void* = NULL
+            pApplicationName:               const char* = "Triangle"
+            applicationVersion:             uint32_t = 4194304
+            pEngineName:                    const char* = "No Engine"
+            engineVersion:                  uint32_t = 4194304
+            apiVersion:                     uint32_t = 4194304
+        enabledLayerCount:              uint32_t = 0
+        ppEnabledLayerNames:            const char* const* = 000001833CB8C090
+        enabledExtensionCount:          uint32_t = 3
+        ppEnabledExtensionNames:        const char* const* = 000001833CBA7200
+            ppEnabledExtensionNames[0]:     const char* const = "VK_KHR_surface"
+            ppEnabledExtensionNames[1]:     const char* const = "VK_KHR_win32_surface"
+            ppEnabledExtensionNames[2]:     const char* const = "VK_EXT_debug_utils"
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+    pInstance:                      VkInstance* = 000001833F4FC8B0
+
+Thread 0, Frame 0:
+vkCreateDebugUtilsMessengerEXT(instance, pCreateInfo, pAllocator, pMessenger) returns VkResult VK_SUCCESS (0):
+    instance:                       VkInstance = 000001833F4FC8B0
+    pCreateInfo:                    const VkDebugUtilsMessengerCreateInfoEXT* = 0000002C5CD5F508:
+        sType:                          VkStructureType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT (1000128004)
+        pNext:                          const void* = NULL
+        flags:                          VkDebugUtilsMessengerCreateFlagsEXT = 0
+        messageSeverity:                VkDebugUtilsMessageSeverityFlagsEXT = 4353 (VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT)
+        messageType:                    VkDebugUtilsMessageTypeFlagsEXT = 7 (VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT)
+        pfnUserCallback:                PFN_vkDebugUtilsMessengerCallbackEXT = 00007FF73F1D65F4
+        pUserData:                      void* = NULL
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+    pMessenger:                     VkDebugUtilsMessengerEXT* = 000001833CBDD7A0
+
+Thread 0, Frame 0:
+vkCreateWin32SurfaceKHR(instance, pCreateInfo, pAllocator, pSurface) returns VkResult VK_SUCCESS (0):
+    instance:                       VkInstance = 000001833F4FC8B0
+    pCreateInfo:                    const VkWin32SurfaceCreateInfoKHR* = 0000002C5CD5F4C0:
+        sType:                          VkStructureType = VK_STRUCTURE_TYPE_WIN32_SURFACE_CREATE_INFO_KHR (1000009000)
+        pNext:                          const void* = NULL
+        flags:                          VkWin32SurfaceCreateFlagsKHR = 0
+        hinstance:                      HINSTANCE = 00007FF73F1B0000
+        hwnd:                           HWND = 00000000007B04E6
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+    pSurface:                       VkSurfaceKHR* = 000001833F6EC920
+
+Thread 0, Frame 0:
+vkEnumeratePhysicalDevices(instance, pPhysicalDeviceCount, pPhysicalDevices) returns VkResult VK_SUCCESS (0):
+    instance:                       VkInstance = 000001833F4FC8B0
+    pPhysicalDeviceCount:           uint32_t* = 1
+    pPhysicalDevices:               VkPhysicalDevice* = NULL
+
+Thread 0, Frame 0:
+vkEnumeratePhysicalDevices(instance, pPhysicalDeviceCount, pPhysicalDevices) returns VkResult VK_SUCCESS (0):
+    instance:                       VkInstance = 000001833F4FC8B0
+    pPhysicalDeviceCount:           uint32_t* = 1
+    pPhysicalDevices:               VkPhysicalDevice* = 000001833F6A50A8
+        pPhysicalDevices[0]:            VkPhysicalDevice = 000001833F8C0960
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceFeatures(physicalDevice, pFeatures) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pFeatures:                      VkPhysicalDeviceFeatures* = 000001833F915C80:
+        robustBufferAccess:             VkBool32 = 1
+        fullDrawIndexUint32:            VkBool32 = 1
+        imageCubeArray:                 VkBool32 = 1
+        independentBlend:               VkBool32 = 1
+        geometryShader:                 VkBool32 = 1
+        tessellationShader:             VkBool32 = 1
+        sampleRateShading:              VkBool32 = 1
+        dualSrcBlend:                   VkBool32 = 1
+        logicOp:                        VkBool32 = 1
+        multiDrawIndirect:              VkBool32 = 1
+        drawIndirectFirstInstance:      VkBool32 = 1
+        depthClamp:                     VkBool32 = 1
+        depthBiasClamp:                 VkBool32 = 1
+        fillModeNonSolid:               VkBool32 = 1
+        depthBounds:                    VkBool32 = 1
+        wideLines:                      VkBool32 = 1
+        largePoints:                    VkBool32 = 1
+        alphaToOne:                     VkBool32 = 0
+        multiViewport:                  VkBool32 = 1
+        samplerAnisotropy:              VkBool32 = 1
+        textureCompressionETC2:         VkBool32 = 0
+        textureCompressionASTC_LDR:     VkBool32 = 0
+        textureCompressionBC:           VkBool32 = 1
+        occlusionQueryPrecise:          VkBool32 = 1
+        pipelineStatisticsQuery:        VkBool32 = 1
+        vertexPipelineStoresAndAtomics: VkBool32 = 1
+        fragmentStoresAndAtomics:       VkBool32 = 1
+        shaderTessellationAndGeometryPointSize: VkBool32 = 1
+        shaderImageGatherExtended:      VkBool32 = 1
+        shaderStorageImageExtendedFormats: VkBool32 = 1
+        shaderStorageImageMultisample:  VkBool32 = 1
+        shaderStorageImageReadWithoutFormat: VkBool32 = 1
+        shaderStorageImageWriteWithoutFormat: VkBool32 = 1
+        shaderUniformBufferArrayDynamicIndexing: VkBool32 = 1
+        shaderSampledImageArrayDynamicIndexing: VkBool32 = 1
+        shaderStorageBufferArrayDynamicIndexing: VkBool32 = 1
+        shaderStorageImageArrayDynamicIndexing: VkBool32 = 1
+        shaderClipDistance:             VkBool32 = 1
+        shaderCullDistance:             VkBool32 = 1
+        shaderFloat64:                  VkBool32 = 1
+        shaderInt64:                    VkBool32 = 1
+        shaderInt16:                    VkBool32 = 1
+        shaderResourceResidency:        VkBool32 = 1
+        shaderResourceMinLod:           VkBool32 = 1
+        sparseBinding:                  VkBool32 = 1
+        sparseResidencyBuffer:          VkBool32 = 1
+        sparseResidencyImage2D:         VkBool32 = 1
+        sparseResidencyImage3D:         VkBool32 = 1
+        sparseResidency2Samples:        VkBool32 = 0
+        sparseResidency4Samples:        VkBool32 = 0
+        sparseResidency8Samples:        VkBool32 = 0
+        sparseResidency16Samples:       VkBool32 = 0
+        sparseResidencyAliased:         VkBool32 = 1
+        variableMultisampleRate:        VkBool32 = 1
+        inheritedQueries:               VkBool32 = 1
+
+Thread 0, Frame 0:
+vkEnumeratePhysicalDevices(instance, pPhysicalDeviceCount, pPhysicalDevices) returns VkResult VK_SUCCESS (0):
+    instance:                       VkInstance = 000001833F4FC8B0
+    pPhysicalDeviceCount:           uint32_t* = 1
+    pPhysicalDevices:               VkPhysicalDevice* = NULL
+
+Thread 0, Frame 0:
+vkEnumeratePhysicalDevices(instance, pPhysicalDeviceCount, pPhysicalDevices) returns VkResult VK_SUCCESS (0):
+    instance:                       VkInstance = 000001833F4FC8B0
+    pPhysicalDeviceCount:           uint32_t* = 1
+    pPhysicalDevices:               VkPhysicalDevice* = 000001833F6A50A8
+        pPhysicalDevices[0]:            VkPhysicalDevice = 000001833F8C0960
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceFeatures(physicalDevice, pFeatures) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pFeatures:                      VkPhysicalDeviceFeatures* = 000001833F915C80:
+        robustBufferAccess:             VkBool32 = 1
+        fullDrawIndexUint32:            VkBool32 = 1
+        imageCubeArray:                 VkBool32 = 1
+        independentBlend:               VkBool32 = 1
+        geometryShader:                 VkBool32 = 1
+        tessellationShader:             VkBool32 = 1
+        sampleRateShading:              VkBool32 = 1
+        dualSrcBlend:                   VkBool32 = 1
+        logicOp:                        VkBool32 = 1
+        multiDrawIndirect:              VkBool32 = 1
+        drawIndirectFirstInstance:      VkBool32 = 1
+        depthClamp:                     VkBool32 = 1
+        depthBiasClamp:                 VkBool32 = 1
+        fillModeNonSolid:               VkBool32 = 1
+        depthBounds:                    VkBool32 = 1
+        wideLines:                      VkBool32 = 1
+        largePoints:                    VkBool32 = 1
+        alphaToOne:                     VkBool32 = 0
+        multiViewport:                  VkBool32 = 1
+        samplerAnisotropy:              VkBool32 = 1
+        textureCompressionETC2:         VkBool32 = 0
+        textureCompressionASTC_LDR:     VkBool32 = 0
+        textureCompressionBC:           VkBool32 = 1
+        occlusionQueryPrecise:          VkBool32 = 1
+        pipelineStatisticsQuery:        VkBool32 = 1
+        vertexPipelineStoresAndAtomics: VkBool32 = 1
+        fragmentStoresAndAtomics:       VkBool32 = 1
+        shaderTessellationAndGeometryPointSize: VkBool32 = 1
+        shaderImageGatherExtended:      VkBool32 = 1
+        shaderStorageImageExtendedFormats: VkBool32 = 1
+        shaderStorageImageMultisample:  VkBool32 = 1
+        shaderStorageImageReadWithoutFormat: VkBool32 = 1
+        shaderStorageImageWriteWithoutFormat: VkBool32 = 1
+        shaderUniformBufferArrayDynamicIndexing: VkBool32 = 1
+        shaderSampledImageArrayDynamicIndexing: VkBool32 = 1
+        shaderStorageBufferArrayDynamicIndexing: VkBool32 = 1
+        shaderStorageImageArrayDynamicIndexing: VkBool32 = 1
+        shaderClipDistance:             VkBool32 = 1
+        shaderCullDistance:             VkBool32 = 1
+        shaderFloat64:                  VkBool32 = 1
+        shaderInt64:                    VkBool32 = 1
+        shaderInt16:                    VkBool32 = 1
+        shaderResourceResidency:        VkBool32 = 1
+        shaderResourceMinLod:           VkBool32 = 1
+        sparseBinding:                  VkBool32 = 1
+        sparseResidencyBuffer:          VkBool32 = 1
+        sparseResidencyImage2D:         VkBool32 = 1
+        sparseResidencyImage3D:         VkBool32 = 1
+        sparseResidency2Samples:        VkBool32 = 0
+        sparseResidency4Samples:        VkBool32 = 0
+        sparseResidency8Samples:        VkBool32 = 0
+        sparseResidency16Samples:       VkBool32 = 0
+        sparseResidencyAliased:         VkBool32 = 1
+        variableMultisampleRate:        VkBool32 = 1
+        inheritedQueries:               VkBool32 = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceProperties(physicalDevice, pProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pProperties:                    VkPhysicalDeviceProperties* = 0000002C5CD5EC10:
+        apiVersion:                     uint32_t = 4198508
+        driverVersion:                  uint32_t = 8388699
+        vendorID:                       uint32_t = 4098
+        deviceID:                       uint32_t = 5597
+        deviceType:                     VkPhysicalDeviceType = VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU (1)
+        deviceName:                     char[VK_MAX_PHYSICAL_DEVICE_NAME_SIZE] = "AMD Radeon(TM) Vega 8 Graphics"
+        pipelineCacheUUID:              uint8_t[VK_UUID_SIZE] = 0000002C5CD5ED24
+            pipelineCacheUUID[0]:           uint8_t = 2
+            pipelineCacheUUID[1]:           uint8_t = 16
+            pipelineCacheUUID[2]:           uint8_t = 0
+            pipelineCacheUUID[3]:           uint8_t = 0
+            pipelineCacheUUID[4]:           uint8_t = 221
+            pipelineCacheUUID[5]:           uint8_t = 21
+            pipelineCacheUUID[6]:           uint8_t = 0
+            pipelineCacheUUID[7]:           uint8_t = 0
+            pipelineCacheUUID[8]:           uint8_t = 246
+            pipelineCacheUUID[9]:           uint8_t = 1
+            pipelineCacheUUID[10]:          uint8_t = 0
+            pipelineCacheUUID[11]:          uint8_t = 1
+            pipelineCacheUUID[12]:          uint8_t = 25
+            pipelineCacheUUID[13]:          uint8_t = 162
+            pipelineCacheUUID[14]:          uint8_t = 92
+            pipelineCacheUUID[15]:          uint8_t = 199
+        limits:                         VkPhysicalDeviceLimits = 0000002C5CD5ED38:
+            maxImageDimension1D:            uint32_t = 16384
+            maxImageDimension2D:            uint32_t = 16384
+            maxImageDimension3D:            uint32_t = 2048
+            maxImageDimensionCube:          uint32_t = 16384
+            maxImageArrayLayers:            uint32_t = 2048
+            maxTexelBufferElements:         uint32_t = 4294967295
+            maxUniformBufferRange:          uint32_t = 4294967295
+            maxStorageBufferRange:          uint32_t = 4294967295
+            maxPushConstantsSize:           uint32_t = 128
+            maxMemoryAllocationCount:       uint32_t = 4096
+            maxSamplerAllocationCount:      uint32_t = 1048576
+            bufferImageGranularity:         VkDeviceSize = 1
+            sparseAddressSpaceSize:         VkDeviceSize = 17579301142528
+            maxBoundDescriptorSets:         uint32_t = 32
+            maxPerStageDescriptorSamplers:  uint32_t = 4294967295
+            maxPerStageDescriptorUniformBuffers: uint32_t = 4294967295
+            maxPerStageDescriptorStorageBuffers: uint32_t = 4294967295
+            maxPerStageDescriptorSampledImages: uint32_t = 4294967295
+            maxPerStageDescriptorStorageImages: uint32_t = 4294967295
+            maxPerStageDescriptorInputAttachments: uint32_t = 4294967295
+            maxPerStageResources:           uint32_t = 4294967295
+            maxDescriptorSetSamplers:       uint32_t = 4294967295
+            maxDescriptorSetUniformBuffers: uint32_t = 4294967295
+            maxDescriptorSetUniformBuffersDynamic: uint32_t = 8
+            maxDescriptorSetStorageBuffers: uint32_t = 4294967295
+            maxDescriptorSetStorageBuffersDynamic: uint32_t = 8
+            maxDescriptorSetSampledImages:  uint32_t = 4294967295
+            maxDescriptorSetStorageImages:  uint32_t = 4294967295
+            maxDescriptorSetInputAttachments: uint32_t = 4294967295
+            maxVertexInputAttributes:       uint32_t = 64
+            maxVertexInputBindings:         uint32_t = 32
+            maxVertexInputAttributeOffset:  uint32_t = 4294967295
+            maxVertexInputBindingStride:    uint32_t = 16383
+            maxVertexOutputComponents:      uint32_t = 128
+            maxTessellationGenerationLevel: uint32_t = 64
+            maxTessellationPatchSize:       uint32_t = 32
+            maxTessellationControlPerVertexInputComponents: uint32_t = 128
+            maxTessellationControlPerVertexOutputComponents: uint32_t = 128
+            maxTessellationControlPerPatchOutputComponents: uint32_t = 120
+            maxTessellationControlTotalOutputComponents: uint32_t = 4096
+            maxTessellationEvaluationInputComponents: uint32_t = 128
+            maxTessellationEvaluationOutputComponents: uint32_t = 128
+            maxGeometryShaderInvocations:   uint32_t = 127
+            maxGeometryInputComponents:     uint32_t = 128
+            maxGeometryOutputComponents:    uint32_t = 128
+            maxGeometryOutputVertices:      uint32_t = 1024
+            maxGeometryTotalOutputComponents: uint32_t = 16384
+            maxFragmentInputComponents:     uint32_t = 128
+            maxFragmentOutputAttachments:   uint32_t = 8
+            maxFragmentDualSrcAttachments:  uint32_t = 1
+            maxFragmentCombinedOutputResources: uint32_t = 4294967295
+            maxComputeSharedMemorySize:     uint32_t = 32768
+            maxComputeWorkGroupCount:       uint32_t[3] = 0000002C5CD5EE14
+                maxComputeWorkGroupCount[0]:    uint32_t = 65535
+                maxComputeWorkGroupCount[1]:    uint32_t = 65535
+                maxComputeWorkGroupCount[2]:    uint32_t = 65535
+            maxComputeWorkGroupInvocations: uint32_t = 1024
+            maxComputeWorkGroupSize:        uint32_t[3] = 0000002C5CD5EE24
+                maxComputeWorkGroupSize[0]:     uint32_t = 1024
+                maxComputeWorkGroupSize[1]:     uint32_t = 1024
+                maxComputeWorkGroupSize[2]:     uint32_t = 1024
+            subPixelPrecisionBits:          uint32_t = 8
+            subTexelPrecisionBits:          uint32_t = 8
+            mipmapPrecisionBits:            uint32_t = 8
+            maxDrawIndexedIndexValue:       uint32_t = 4294967295
+            maxDrawIndirectCount:           uint32_t = 4294967295
+            maxSamplerLodBias:              float = 15.9961
+            maxSamplerAnisotropy:           float = 16
+            maxViewports:                   uint32_t = 16
+            maxViewportDimensions:          uint32_t[2] = 0000002C5CD5EE50
+                maxViewportDimensions[0]:       uint32_t = 16384
+                maxViewportDimensions[1]:       uint32_t = 16384
+            viewportBoundsRange:            float[2] = 0000002C5CD5EE58
+                viewportBoundsRange[0]:         float = -32768
+                viewportBoundsRange[1]:         float = 32767
+            viewportSubPixelBits:           uint32_t = 8
+            minMemoryMapAlignment:          size_t = 64
+            minTexelBufferOffsetAlignment:  VkDeviceSize = 1
+            minUniformBufferOffsetAlignment: VkDeviceSize = 16
+            minStorageBufferOffsetAlignment: VkDeviceSize = 4
+            minTexelOffset:                 int32_t = -64
+            maxTexelOffset:                 uint32_t = 63
+            minTexelGatherOffset:           int32_t = -32
+            maxTexelGatherOffset:           uint32_t = 31
+            minInterpolationOffset:         float = -2
+            maxInterpolationOffset:         float = 2
+            subPixelInterpolationOffsetBits: uint32_t = 8
+            maxFramebufferWidth:            uint32_t = 16384
+            maxFramebufferHeight:           uint32_t = 16384
+            maxFramebufferLayers:           uint32_t = 2048
+            framebufferColorSampleCounts:   VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferDepthSampleCounts:   VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferStencilSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferNoAttachmentsSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            maxColorAttachments:            uint32_t = 8
+            sampledImageColorSampleCounts:  VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageIntegerSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageDepthSampleCounts:  VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageStencilSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            storageImageSampleCounts:       VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            maxSampleMaskWords:             uint32_t = 1
+            timestampComputeAndGraphics:    VkBool32 = 1
+            timestampPeriod:                float = 40
+            maxClipDistances:               uint32_t = 8
+            maxCullDistances:               uint32_t = 8
+            maxCombinedClipAndCullDistances: uint32_t = 8
+            discreteQueuePriorities:        uint32_t = 2
+            pointSizeRange:                 float[2] = 0000002C5CD5EEF4
+                pointSizeRange[0]:              float = 0
+                pointSizeRange[1]:              float = 8191.88
+            lineWidthRange:                 float[2] = 0000002C5CD5EEFC
+                lineWidthRange[0]:              float = 0
+                lineWidthRange[1]:              float = 8191.88
+            pointSizeGranularity:           float = 0.125
+            lineWidthGranularity:           float = 0.125
+            strictLines:                    VkBool32 = 0
+            standardSampleLocations:        VkBool32 = 1
+            optimalBufferCopyOffsetAlignment: VkDeviceSize = 1
+            optimalBufferCopyRowPitchAlignment: VkDeviceSize = 1
+            nonCoherentAtomSize:            VkDeviceSize = 128
+        sparseProperties:               VkPhysicalDeviceSparseProperties = 0000002C5CD5EF30:
+            residencyStandard2DBlockShape:  VkBool32 = 1
+            residencyStandard2DMultisampleBlockShape: VkBool32 = 0
+            residencyStandard3DBlockShape:  VkBool32 = 1
+            residencyAlignedMipSize:        VkBool32 = 0
+            residencyNonResidentStrict:     VkBool32 = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceFeatures(physicalDevice, pFeatures) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pFeatures:                      VkPhysicalDeviceFeatures* = 0000002C5CD5EF70:
+        robustBufferAccess:             VkBool32 = 1
+        fullDrawIndexUint32:            VkBool32 = 1
+        imageCubeArray:                 VkBool32 = 1
+        independentBlend:               VkBool32 = 1
+        geometryShader:                 VkBool32 = 1
+        tessellationShader:             VkBool32 = 1
+        sampleRateShading:              VkBool32 = 1
+        dualSrcBlend:                   VkBool32 = 1
+        logicOp:                        VkBool32 = 1
+        multiDrawIndirect:              VkBool32 = 1
+        drawIndirectFirstInstance:      VkBool32 = 1
+        depthClamp:                     VkBool32 = 1
+        depthBiasClamp:                 VkBool32 = 1
+        fillModeNonSolid:               VkBool32 = 1
+        depthBounds:                    VkBool32 = 1
+        wideLines:                      VkBool32 = 1
+        largePoints:                    VkBool32 = 1
+        alphaToOne:                     VkBool32 = 0
+        multiViewport:                  VkBool32 = 1
+        samplerAnisotropy:              VkBool32 = 1
+        textureCompressionETC2:         VkBool32 = 0
+        textureCompressionASTC_LDR:     VkBool32 = 0
+        textureCompressionBC:           VkBool32 = 1
+        occlusionQueryPrecise:          VkBool32 = 1
+        pipelineStatisticsQuery:        VkBool32 = 1
+        vertexPipelineStoresAndAtomics: VkBool32 = 1
+        fragmentStoresAndAtomics:       VkBool32 = 1
+        shaderTessellationAndGeometryPointSize: VkBool32 = 1
+        shaderImageGatherExtended:      VkBool32 = 1
+        shaderStorageImageExtendedFormats: VkBool32 = 1
+        shaderStorageImageMultisample:  VkBool32 = 1
+        shaderStorageImageReadWithoutFormat: VkBool32 = 1
+        shaderStorageImageWriteWithoutFormat: VkBool32 = 1
+        shaderUniformBufferArrayDynamicIndexing: VkBool32 = 1
+        shaderSampledImageArrayDynamicIndexing: VkBool32 = 1
+        shaderStorageBufferArrayDynamicIndexing: VkBool32 = 1
+        shaderStorageImageArrayDynamicIndexing: VkBool32 = 1
+        shaderClipDistance:             VkBool32 = 1
+        shaderCullDistance:             VkBool32 = 1
+        shaderFloat64:                  VkBool32 = 1
+        shaderInt64:                    VkBool32 = 1
+        shaderInt16:                    VkBool32 = 1
+        shaderResourceResidency:        VkBool32 = 1
+        shaderResourceMinLod:           VkBool32 = 1
+        sparseBinding:                  VkBool32 = 1
+        sparseResidencyBuffer:          VkBool32 = 1
+        sparseResidencyImage2D:         VkBool32 = 1
+        sparseResidencyImage3D:         VkBool32 = 1
+        sparseResidency2Samples:        VkBool32 = 0
+        sparseResidency4Samples:        VkBool32 = 0
+        sparseResidency8Samples:        VkBool32 = 0
+        sparseResidency16Samples:       VkBool32 = 0
+        sparseResidencyAliased:         VkBool32 = 1
+        variableMultisampleRate:        VkBool32 = 1
+        inheritedQueries:               VkBool32 = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pQueueFamilyPropertyCount:      uint32_t* = 3
+    pQueueFamilyProperties:         VkQueueFamilyProperties* = NULL
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pQueueFamilyPropertyCount:      uint32_t* = 3
+    pQueueFamilyProperties:         VkQueueFamilyProperties* = 000001833F8D7E40
+        pQueueFamilyProperties[0]:      VkQueueFamilyProperties = 000001833F8D7E40:
+            queueFlags:                     VkQueueFlags = 15 (VK_QUEUE_GRAPHICS_BIT | VK_QUEUE_COMPUTE_BIT | VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 1
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 000001833F8D7E4C:
+                width:                          uint32_t = 1
+                height:                         uint32_t = 1
+                depth:                          uint32_t = 1
+        pQueueFamilyProperties[1]:      VkQueueFamilyProperties = 000001833F8D7E58:
+            queueFlags:                     VkQueueFlags = 14 (VK_QUEUE_COMPUTE_BIT | VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 2
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 000001833F8D7E64:
+                width:                          uint32_t = 1
+                height:                         uint32_t = 1
+                depth:                          uint32_t = 1
+        pQueueFamilyProperties[2]:      VkQueueFamilyProperties = 000001833F8D7E70:
+            queueFlags:                     VkQueueFlags = 12 (VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 1
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 000001833F8D7E7C:
+                width:                          uint32_t = 16
+                height:                         uint32_t = 16
+                depth:                          uint32_t = 8
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    queueFamilyIndex:               uint32_t = 0
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSupported:                     VkBool32* = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    queueFamilyIndex:               uint32_t = 1
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSupported:                     VkBool32* = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    queueFamilyIndex:               uint32_t = 2
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSupported:                     VkBool32* = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceCapabilitiesKHR(physicalDevice, surface, pSurfaceCapabilities) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSurfaceCapabilities:           VkSurfaceCapabilitiesKHR* = 0000002C5CD5EA00:
+        minImageCount:                  uint32_t = 1
+        maxImageCount:                  uint32_t = 16
+        currentExtent:                  VkExtent2D = 0000002C5CD5EA08:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        minImageExtent:                 VkExtent2D = 0000002C5CD5EA10:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        maxImageExtent:                 VkExtent2D = 0000002C5CD5EA18:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        maxImageArrayLayers:            uint32_t = 1
+        supportedTransforms:            VkSurfaceTransformFlagsKHR = 1 (VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR)
+        currentTransform:               VkSurfaceTransformFlagBitsKHR = 1 (VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR)
+        supportedCompositeAlpha:        VkCompositeAlphaFlagsKHR = 1 (VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR)
+        supportedUsageFlags:            VkImageUsageFlags = 159 (VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, pSurfaceFormatCount, pSurfaceFormats) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSurfaceFormatCount:            uint32_t* = 20
+    pSurfaceFormats:                VkSurfaceFormatKHR* = NULL
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, pSurfaceFormatCount, pSurfaceFormats) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSurfaceFormatCount:            uint32_t* = 20
+    pSurfaceFormats:                VkSurfaceFormatKHR* = 000001833FA85A00
+        pSurfaceFormats[0]:             VkSurfaceFormatKHR = 000001833FA85A00:
+            format:                         VkFormat = VK_FORMAT_B8G8R8A8_UNORM (44)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[1]:             VkSurfaceFormatKHR = 000001833FA85A08:
+            format:                         VkFormat = VK_FORMAT_B8G8R8A8_SNORM (45)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[2]:             VkSurfaceFormatKHR = 000001833FA85A10:
+            format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[3]:             VkSurfaceFormatKHR = 000001833FA85A18:
+            format:                         VkFormat = VK_FORMAT_R16G16B16A16_UNORM (91)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[4]:             VkSurfaceFormatKHR = 000001833FA85A20:
+            format:                         VkFormat = VK_FORMAT_R16G16B16A16_SNORM (92)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[5]:             VkSurfaceFormatKHR = 000001833FA85A28:
+            format:                         VkFormat = VK_FORMAT_R16G16B16A16_SFLOAT (97)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[6]:             VkSurfaceFormatKHR = 000001833FA85A30:
+            format:                         VkFormat = VK_FORMAT_A2R10G10B10_UNORM_PACK32 (58)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[7]:             VkSurfaceFormatKHR = 000001833FA85A38:
+            format:                         VkFormat = VK_FORMAT_A2B10G10R10_UNORM_PACK32 (64)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[8]:             VkSurfaceFormatKHR = 000001833FA85A40:
+            format:                         VkFormat = VK_FORMAT_B10G11R11_UFLOAT_PACK32 (122)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[9]:             VkSurfaceFormatKHR = 000001833FA85A48:
+            format:                         VkFormat = VK_FORMAT_R8G8B8A8_UNORM (37)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[10]:            VkSurfaceFormatKHR = 000001833FA85A50:
+            format:                         VkFormat = VK_FORMAT_A8B8G8R8_UNORM_PACK32 (51)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[11]:            VkSurfaceFormatKHR = 000001833FA85A58:
+            format:                         VkFormat = VK_FORMAT_R8G8B8A8_SNORM (38)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[12]:            VkSurfaceFormatKHR = 000001833FA85A60:
+            format:                         VkFormat = VK_FORMAT_R8G8B8A8_SRGB (43)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[13]:            VkSurfaceFormatKHR = 000001833FA85A68:
+            format:                         VkFormat = VK_FORMAT_A8B8G8R8_SNORM_PACK32 (52)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[14]:            VkSurfaceFormatKHR = 000001833FA85A70:
+            format:                         VkFormat = VK_FORMAT_A8B8G8R8_SRGB_PACK32 (57)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[15]:            VkSurfaceFormatKHR = 000001833FA85A78:
+            format:                         VkFormat = VK_FORMAT_R5G6B5_UNORM_PACK16 (4)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[16]:            VkSurfaceFormatKHR = 000001833FA85A80:
+            format:                         VkFormat = VK_FORMAT_B5G6R5_UNORM_PACK16 (5)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[17]:            VkSurfaceFormatKHR = 000001833FA85A88:
+            format:                         VkFormat = VK_FORMAT_A1R5G5B5_UNORM_PACK16 (8)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[18]:            VkSurfaceFormatKHR = 000001833FA85A90:
+            format:                         VkFormat = VK_FORMAT_R4G4B4A4_UNORM_PACK16 (2)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[19]:            VkSurfaceFormatKHR = 000001833FA85A98:
+            format:                         VkFormat = VK_FORMAT_B4G4R4A4_UNORM_PACK16 (3)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, pPresentModeCount, pPresentModes) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pPresentModeCount:              uint32_t* = 3
+    pPresentModes:                  VkPresentModeKHR* = NULL
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, pPresentModeCount, pPresentModes) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pPresentModeCount:              uint32_t* = 3
+    pPresentModes:                  VkPresentModeKHR* = 000001833F6EBC80
+        pPresentModes[0]:               VkPresentModeKHR = VK_PRESENT_MODE_IMMEDIATE_KHR (0)
+        pPresentModes[1]:               VkPresentModeKHR = VK_PRESENT_MODE_FIFO_KHR (2)
+        pPresentModes[2]:               VkPresentModeKHR = VK_PRESENT_MODE_FIFO_RELAXED_KHR (3)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pQueueFamilyPropertyCount:      uint32_t* = 3
+    pQueueFamilyProperties:         VkQueueFamilyProperties* = NULL
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pQueueFamilyPropertyCount:      uint32_t* = 3
+    pQueueFamilyProperties:         VkQueueFamilyProperties* = 000001833F8D7270
+        pQueueFamilyProperties[0]:      VkQueueFamilyProperties = 000001833F8D7270:
+            queueFlags:                     VkQueueFlags = 15 (VK_QUEUE_GRAPHICS_BIT | VK_QUEUE_COMPUTE_BIT | VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 1
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 000001833F8D727C:
+                width:                          uint32_t = 1
+                height:                         uint32_t = 1
+                depth:                          uint32_t = 1
+        pQueueFamilyProperties[1]:      VkQueueFamilyProperties = 000001833F8D7288:
+            queueFlags:                     VkQueueFlags = 14 (VK_QUEUE_COMPUTE_BIT | VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 2
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 000001833F8D7294:
+                width:                          uint32_t = 1
+                height:                         uint32_t = 1
+                depth:                          uint32_t = 1
+        pQueueFamilyProperties[2]:      VkQueueFamilyProperties = 000001833F8D72A0:
+            queueFlags:                     VkQueueFlags = 12 (VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 1
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 000001833F8D72AC:
+                width:                          uint32_t = 16
+                height:                         uint32_t = 16
+                depth:                          uint32_t = 8
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    queueFamilyIndex:               uint32_t = 0
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSupported:                     VkBool32* = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    queueFamilyIndex:               uint32_t = 1
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSupported:                     VkBool32* = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    queueFamilyIndex:               uint32_t = 2
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSupported:                     VkBool32* = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceProperties(physicalDevice, pProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pProperties:                    VkPhysicalDeviceProperties* = 0000002C5CD5EB40:
+        apiVersion:                     uint32_t = 4198508
+        driverVersion:                  uint32_t = 8388699
+        vendorID:                       uint32_t = 4098
+        deviceID:                       uint32_t = 5597
+        deviceType:                     VkPhysicalDeviceType = VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU (1)
+        deviceName:                     char[VK_MAX_PHYSICAL_DEVICE_NAME_SIZE] = "AMD Radeon(TM) Vega 8 Graphics"
+        pipelineCacheUUID:              uint8_t[VK_UUID_SIZE] = 0000002C5CD5EC54
+            pipelineCacheUUID[0]:           uint8_t = 2
+            pipelineCacheUUID[1]:           uint8_t = 16
+            pipelineCacheUUID[2]:           uint8_t = 0
+            pipelineCacheUUID[3]:           uint8_t = 0
+            pipelineCacheUUID[4]:           uint8_t = 221
+            pipelineCacheUUID[5]:           uint8_t = 21
+            pipelineCacheUUID[6]:           uint8_t = 0
+            pipelineCacheUUID[7]:           uint8_t = 0
+            pipelineCacheUUID[8]:           uint8_t = 246
+            pipelineCacheUUID[9]:           uint8_t = 1
+            pipelineCacheUUID[10]:          uint8_t = 0
+            pipelineCacheUUID[11]:          uint8_t = 1
+            pipelineCacheUUID[12]:          uint8_t = 25
+            pipelineCacheUUID[13]:          uint8_t = 162
+            pipelineCacheUUID[14]:          uint8_t = 92
+            pipelineCacheUUID[15]:          uint8_t = 199
+        limits:                         VkPhysicalDeviceLimits = 0000002C5CD5EC68:
+            maxImageDimension1D:            uint32_t = 16384
+            maxImageDimension2D:            uint32_t = 16384
+            maxImageDimension3D:            uint32_t = 2048
+            maxImageDimensionCube:          uint32_t = 16384
+            maxImageArrayLayers:            uint32_t = 2048
+            maxTexelBufferElements:         uint32_t = 4294967295
+            maxUniformBufferRange:          uint32_t = 4294967295
+            maxStorageBufferRange:          uint32_t = 4294967295
+            maxPushConstantsSize:           uint32_t = 128
+            maxMemoryAllocationCount:       uint32_t = 4096
+            maxSamplerAllocationCount:      uint32_t = 1048576
+            bufferImageGranularity:         VkDeviceSize = 1
+            sparseAddressSpaceSize:         VkDeviceSize = 17579301142528
+            maxBoundDescriptorSets:         uint32_t = 32
+            maxPerStageDescriptorSamplers:  uint32_t = 4294967295
+            maxPerStageDescriptorUniformBuffers: uint32_t = 4294967295
+            maxPerStageDescriptorStorageBuffers: uint32_t = 4294967295
+            maxPerStageDescriptorSampledImages: uint32_t = 4294967295
+            maxPerStageDescriptorStorageImages: uint32_t = 4294967295
+            maxPerStageDescriptorInputAttachments: uint32_t = 4294967295
+            maxPerStageResources:           uint32_t = 4294967295
+            maxDescriptorSetSamplers:       uint32_t = 4294967295
+            maxDescriptorSetUniformBuffers: uint32_t = 4294967295
+            maxDescriptorSetUniformBuffersDynamic: uint32_t = 8
+            maxDescriptorSetStorageBuffers: uint32_t = 4294967295
+            maxDescriptorSetStorageBuffersDynamic: uint32_t = 8
+            maxDescriptorSetSampledImages:  uint32_t = 4294967295
+            maxDescriptorSetStorageImages:  uint32_t = 4294967295
+            maxDescriptorSetInputAttachments: uint32_t = 4294967295
+            maxVertexInputAttributes:       uint32_t = 64
+            maxVertexInputBindings:         uint32_t = 32
+            maxVertexInputAttributeOffset:  uint32_t = 4294967295
+            maxVertexInputBindingStride:    uint32_t = 16383
+            maxVertexOutputComponents:      uint32_t = 128
+            maxTessellationGenerationLevel: uint32_t = 64
+            maxTessellationPatchSize:       uint32_t = 32
+            maxTessellationControlPerVertexInputComponents: uint32_t = 128
+            maxTessellationControlPerVertexOutputComponents: uint32_t = 128
+            maxTessellationControlPerPatchOutputComponents: uint32_t = 120
+            maxTessellationControlTotalOutputComponents: uint32_t = 4096
+            maxTessellationEvaluationInputComponents: uint32_t = 128
+            maxTessellationEvaluationOutputComponents: uint32_t = 128
+            maxGeometryShaderInvocations:   uint32_t = 127
+            maxGeometryInputComponents:     uint32_t = 128
+            maxGeometryOutputComponents:    uint32_t = 128
+            maxGeometryOutputVertices:      uint32_t = 1024
+            maxGeometryTotalOutputComponents: uint32_t = 16384
+            maxFragmentInputComponents:     uint32_t = 128
+            maxFragmentOutputAttachments:   uint32_t = 8
+            maxFragmentDualSrcAttachments:  uint32_t = 1
+            maxFragmentCombinedOutputResources: uint32_t = 4294967295
+            maxComputeSharedMemorySize:     uint32_t = 32768
+            maxComputeWorkGroupCount:       uint32_t[3] = 0000002C5CD5ED44
+                maxComputeWorkGroupCount[0]:    uint32_t = 65535
+                maxComputeWorkGroupCount[1]:    uint32_t = 65535
+                maxComputeWorkGroupCount[2]:    uint32_t = 65535
+            maxComputeWorkGroupInvocations: uint32_t = 1024
+            maxComputeWorkGroupSize:        uint32_t[3] = 0000002C5CD5ED54
+                maxComputeWorkGroupSize[0]:     uint32_t = 1024
+                maxComputeWorkGroupSize[1]:     uint32_t = 1024
+                maxComputeWorkGroupSize[2]:     uint32_t = 1024
+            subPixelPrecisionBits:          uint32_t = 8
+            subTexelPrecisionBits:          uint32_t = 8
+            mipmapPrecisionBits:            uint32_t = 8
+            maxDrawIndexedIndexValue:       uint32_t = 4294967295
+            maxDrawIndirectCount:           uint32_t = 4294967295
+            maxSamplerLodBias:              float = 15.9961
+            maxSamplerAnisotropy:           float = 16
+            maxViewports:                   uint32_t = 16
+            maxViewportDimensions:          uint32_t[2] = 0000002C5CD5ED80
+                maxViewportDimensions[0]:       uint32_t = 16384
+                maxViewportDimensions[1]:       uint32_t = 16384
+            viewportBoundsRange:            float[2] = 0000002C5CD5ED88
+                viewportBoundsRange[0]:         float = -32768
+                viewportBoundsRange[1]:         float = 32767
+            viewportSubPixelBits:           uint32_t = 8
+            minMemoryMapAlignment:          size_t = 64
+            minTexelBufferOffsetAlignment:  VkDeviceSize = 1
+            minUniformBufferOffsetAlignment: VkDeviceSize = 16
+            minStorageBufferOffsetAlignment: VkDeviceSize = 4
+            minTexelOffset:                 int32_t = -64
+            maxTexelOffset:                 uint32_t = 63
+            minTexelGatherOffset:           int32_t = -32
+            maxTexelGatherOffset:           uint32_t = 31
+            minInterpolationOffset:         float = -2
+            maxInterpolationOffset:         float = 2
+            subPixelInterpolationOffsetBits: uint32_t = 8
+            maxFramebufferWidth:            uint32_t = 16384
+            maxFramebufferHeight:           uint32_t = 16384
+            maxFramebufferLayers:           uint32_t = 2048
+            framebufferColorSampleCounts:   VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferDepthSampleCounts:   VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferStencilSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferNoAttachmentsSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            maxColorAttachments:            uint32_t = 8
+            sampledImageColorSampleCounts:  VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageIntegerSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageDepthSampleCounts:  VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageStencilSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            storageImageSampleCounts:       VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            maxSampleMaskWords:             uint32_t = 1
+            timestampComputeAndGraphics:    VkBool32 = 1
+            timestampPeriod:                float = 40
+            maxClipDistances:               uint32_t = 8
+            maxCullDistances:               uint32_t = 8
+            maxCombinedClipAndCullDistances: uint32_t = 8
+            discreteQueuePriorities:        uint32_t = 2
+            pointSizeRange:                 float[2] = 0000002C5CD5EE24
+                pointSizeRange[0]:              float = 0
+                pointSizeRange[1]:              float = 8191.88
+            lineWidthRange:                 float[2] = 0000002C5CD5EE2C
+                lineWidthRange[0]:              float = 0
+                lineWidthRange[1]:              float = 8191.88
+            pointSizeGranularity:           float = 0.125
+            lineWidthGranularity:           float = 0.125
+            strictLines:                    VkBool32 = 0
+            standardSampleLocations:        VkBool32 = 1
+            optimalBufferCopyOffsetAlignment: VkDeviceSize = 1
+            optimalBufferCopyRowPitchAlignment: VkDeviceSize = 1
+            nonCoherentAtomSize:            VkDeviceSize = 128
+        sparseProperties:               VkPhysicalDeviceSparseProperties = 0000002C5CD5EE60:
+            residencyStandard2DBlockShape:  VkBool32 = 1
+            residencyStandard2DMultisampleBlockShape: VkBool32 = 0
+            residencyStandard3DBlockShape:  VkBool32 = 1
+            residencyAlignedMipSize:        VkBool32 = 0
+            residencyNonResidentStrict:     VkBool32 = 1
+
+Thread 0, Frame 0:
+vkCreateDevice(physicalDevice, pCreateInfo, pAllocator, pDevice) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pCreateInfo:                    const VkDeviceCreateInfo* = 0000002C5CD5E9F0:
+        sType:                          VkStructureType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO (3)
+        pNext:                          const void* = NULL
+        flags:                          VkDeviceCreateFlags = 0
+        queueCreateInfoCount:           uint32_t = 2
+        pQueueCreateInfos:              const VkDeviceQueueCreateInfo* = 000001833FAD2CE8
+            pQueueCreateInfos[0]:           const VkDeviceQueueCreateInfo = 000001833FAD2CE8:
+                sType:                          VkStructureType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO (2)
+                pNext:                          const void* = NULL
+                flags:                          VkDeviceQueueCreateFlags = 0
+                queueFamilyIndex:               uint32_t = 0
+                queueCount:                     uint32_t = 1
+                pQueuePriorities:               const float* = 000001833CBDD800
+                    pQueuePriorities[0]:            const float = 1
+            pQueueCreateInfos[1]:           const VkDeviceQueueCreateInfo = 000001833FAD2D10:
+                sType:                          VkStructureType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO (2)
+                pNext:                          const void* = NULL
+                flags:                          VkDeviceQueueCreateFlags = 0
+                queueFamilyIndex:               uint32_t = 2
+                queueCount:                     uint32_t = 1
+                pQueuePriorities:               const float* = 000001833CBDD6C0
+                    pQueuePriorities[0]:            const float = 1
+        enabledLayerCount:              uint32_t = 1
+        ppEnabledLayerNames:            const char* const* = 000001833CBDD7B0
+            ppEnabledLayerNames[0]:         const char* const = "VK_LAYER_KHRONOS_validation"
+        enabledExtensionCount:          uint32_t = 1
+        ppEnabledExtensionNames:        const char* const* = 000001833CBDD650
+            ppEnabledExtensionNames[0]:     const char* const = "VK_KHR_swapchain"
+        pEnabledFeatures:               const VkPhysicalDeviceFeatures* = 000001833FA85640:
+            robustBufferAccess:             VkBool32 = 0
+            fullDrawIndexUint32:            VkBool32 = 0
+            imageCubeArray:                 VkBool32 = 0
+            independentBlend:               VkBool32 = 0
+            geometryShader:                 VkBool32 = 0
+            tessellationShader:             VkBool32 = 0
+            sampleRateShading:              VkBool32 = 0
+            dualSrcBlend:                   VkBool32 = 0
+            logicOp:                        VkBool32 = 0
+            multiDrawIndirect:              VkBool32 = 0
+            drawIndirectFirstInstance:      VkBool32 = 0
+            depthClamp:                     VkBool32 = 0
+            depthBiasClamp:                 VkBool32 = 0
+            fillModeNonSolid:               VkBool32 = 0
+            depthBounds:                    VkBool32 = 0
+            wideLines:                      VkBool32 = 0
+            largePoints:                    VkBool32 = 0
+            alphaToOne:                     VkBool32 = 0
+            multiViewport:                  VkBool32 = 0
+            samplerAnisotropy:              VkBool32 = 0
+            textureCompressionETC2:         VkBool32 = 0
+            textureCompressionASTC_LDR:     VkBool32 = 0
+            textureCompressionBC:           VkBool32 = 0
+            occlusionQueryPrecise:          VkBool32 = 0
+            pipelineStatisticsQuery:        VkBool32 = 0
+            vertexPipelineStoresAndAtomics: VkBool32 = 0
+            fragmentStoresAndAtomics:       VkBool32 = 0
+            shaderTessellationAndGeometryPointSize: VkBool32 = 0
+            shaderImageGatherExtended:      VkBool32 = 0
+            shaderStorageImageExtendedFormats: VkBool32 = 0
+            shaderStorageImageMultisample:  VkBool32 = 0
+            shaderStorageImageReadWithoutFormat: VkBool32 = 0
+            shaderStorageImageWriteWithoutFormat: VkBool32 = 0
+            shaderUniformBufferArrayDynamicIndexing: VkBool32 = 0
+            shaderSampledImageArrayDynamicIndexing: VkBool32 = 0
+            shaderStorageBufferArrayDynamicIndexing: VkBool32 = 0
+            shaderStorageImageArrayDynamicIndexing: VkBool32 = 0
+            shaderClipDistance:             VkBool32 = 0
+            shaderCullDistance:             VkBool32 = 0
+            shaderFloat64:                  VkBool32 = 0
+            shaderInt64:                    VkBool32 = 0
+            shaderInt16:                    VkBool32 = 0
+            shaderResourceResidency:        VkBool32 = 0
+            shaderResourceMinLod:           VkBool32 = 0
+            sparseBinding:                  VkBool32 = 0
+            sparseResidencyBuffer:          VkBool32 = 0
+            sparseResidencyImage2D:         VkBool32 = 0
+            sparseResidencyImage3D:         VkBool32 = 0
+            sparseResidency2Samples:        VkBool32 = 0
+            sparseResidency4Samples:        VkBool32 = 0
+            sparseResidency8Samples:        VkBool32 = 0
+            sparseResidency16Samples:       VkBool32 = 0
+            sparseResidencyAliased:         VkBool32 = 0
+            variableMultisampleRate:        VkBool32 = 0
+            inheritedQueries:               VkBool32 = 0
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+    pDevice:                        VkDevice* = 0000018345F554C0
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceProperties(physicalDevice, pProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pProperties:                    VkPhysicalDeviceProperties* = 0000002C5CD5E5F0:
+        apiVersion:                     uint32_t = 4198508
+        driverVersion:                  uint32_t = 8388699
+        vendorID:                       uint32_t = 4098
+        deviceID:                       uint32_t = 5597
+        deviceType:                     VkPhysicalDeviceType = VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU (1)
+        deviceName:                     char[VK_MAX_PHYSICAL_DEVICE_NAME_SIZE] = "AMD Radeon(TM) Vega 8 Graphics"
+        pipelineCacheUUID:              uint8_t[VK_UUID_SIZE] = 0000002C5CD5E704
+            pipelineCacheUUID[0]:           uint8_t = 2
+            pipelineCacheUUID[1]:           uint8_t = 16
+            pipelineCacheUUID[2]:           uint8_t = 0
+            pipelineCacheUUID[3]:           uint8_t = 0
+            pipelineCacheUUID[4]:           uint8_t = 221
+            pipelineCacheUUID[5]:           uint8_t = 21
+            pipelineCacheUUID[6]:           uint8_t = 0
+            pipelineCacheUUID[7]:           uint8_t = 0
+            pipelineCacheUUID[8]:           uint8_t = 246
+            pipelineCacheUUID[9]:           uint8_t = 1
+            pipelineCacheUUID[10]:          uint8_t = 0
+            pipelineCacheUUID[11]:          uint8_t = 1
+            pipelineCacheUUID[12]:          uint8_t = 25
+            pipelineCacheUUID[13]:          uint8_t = 162
+            pipelineCacheUUID[14]:          uint8_t = 92
+            pipelineCacheUUID[15]:          uint8_t = 199
+        limits:                         VkPhysicalDeviceLimits = 0000002C5CD5E718:
+            maxImageDimension1D:            uint32_t = 16384
+            maxImageDimension2D:            uint32_t = 16384
+            maxImageDimension3D:            uint32_t = 2048
+            maxImageDimensionCube:          uint32_t = 16384
+            maxImageArrayLayers:            uint32_t = 2048
+            maxTexelBufferElements:         uint32_t = 4294967295
+            maxUniformBufferRange:          uint32_t = 4294967295
+            maxStorageBufferRange:          uint32_t = 4294967295
+            maxPushConstantsSize:           uint32_t = 128
+            maxMemoryAllocationCount:       uint32_t = 4096
+            maxSamplerAllocationCount:      uint32_t = 1048576
+            bufferImageGranularity:         VkDeviceSize = 1
+            sparseAddressSpaceSize:         VkDeviceSize = 17579301142528
+            maxBoundDescriptorSets:         uint32_t = 32
+            maxPerStageDescriptorSamplers:  uint32_t = 4294967295
+            maxPerStageDescriptorUniformBuffers: uint32_t = 4294967295
+            maxPerStageDescriptorStorageBuffers: uint32_t = 4294967295
+            maxPerStageDescriptorSampledImages: uint32_t = 4294967295
+            maxPerStageDescriptorStorageImages: uint32_t = 4294967295
+            maxPerStageDescriptorInputAttachments: uint32_t = 4294967295
+            maxPerStageResources:           uint32_t = 4294967295
+            maxDescriptorSetSamplers:       uint32_t = 4294967295
+            maxDescriptorSetUniformBuffers: uint32_t = 4294967295
+            maxDescriptorSetUniformBuffersDynamic: uint32_t = 8
+            maxDescriptorSetStorageBuffers: uint32_t = 4294967295
+            maxDescriptorSetStorageBuffersDynamic: uint32_t = 8
+            maxDescriptorSetSampledImages:  uint32_t = 4294967295
+            maxDescriptorSetStorageImages:  uint32_t = 4294967295
+            maxDescriptorSetInputAttachments: uint32_t = 4294967295
+            maxVertexInputAttributes:       uint32_t = 64
+            maxVertexInputBindings:         uint32_t = 32
+            maxVertexInputAttributeOffset:  uint32_t = 4294967295
+            maxVertexInputBindingStride:    uint32_t = 16383
+            maxVertexOutputComponents:      uint32_t = 128
+            maxTessellationGenerationLevel: uint32_t = 64
+            maxTessellationPatchSize:       uint32_t = 32
+            maxTessellationControlPerVertexInputComponents: uint32_t = 128
+            maxTessellationControlPerVertexOutputComponents: uint32_t = 128
+            maxTessellationControlPerPatchOutputComponents: uint32_t = 120
+            maxTessellationControlTotalOutputComponents: uint32_t = 4096
+            maxTessellationEvaluationInputComponents: uint32_t = 128
+            maxTessellationEvaluationOutputComponents: uint32_t = 128
+            maxGeometryShaderInvocations:   uint32_t = 127
+            maxGeometryInputComponents:     uint32_t = 128
+            maxGeometryOutputComponents:    uint32_t = 128
+            maxGeometryOutputVertices:      uint32_t = 1024
+            maxGeometryTotalOutputComponents: uint32_t = 16384
+            maxFragmentInputComponents:     uint32_t = 128
+            maxFragmentOutputAttachments:   uint32_t = 8
+            maxFragmentDualSrcAttachments:  uint32_t = 1
+            maxFragmentCombinedOutputResources: uint32_t = 4294967295
+            maxComputeSharedMemorySize:     uint32_t = 32768
+            maxComputeWorkGroupCount:       uint32_t[3] = 0000002C5CD5E7F4
+                maxComputeWorkGroupCount[0]:    uint32_t = 65535
+                maxComputeWorkGroupCount[1]:    uint32_t = 65535
+                maxComputeWorkGroupCount[2]:    uint32_t = 65535
+            maxComputeWorkGroupInvocations: uint32_t = 1024
+            maxComputeWorkGroupSize:        uint32_t[3] = 0000002C5CD5E804
+                maxComputeWorkGroupSize[0]:     uint32_t = 1024
+                maxComputeWorkGroupSize[1]:     uint32_t = 1024
+                maxComputeWorkGroupSize[2]:     uint32_t = 1024
+            subPixelPrecisionBits:          uint32_t = 8
+            subTexelPrecisionBits:          uint32_t = 8
+            mipmapPrecisionBits:            uint32_t = 8
+            maxDrawIndexedIndexValue:       uint32_t = 4294967295
+            maxDrawIndirectCount:           uint32_t = 4294967295
+            maxSamplerLodBias:              float = 15.9961
+            maxSamplerAnisotropy:           float = 16
+            maxViewports:                   uint32_t = 16
+            maxViewportDimensions:          uint32_t[2] = 0000002C5CD5E830
+                maxViewportDimensions[0]:       uint32_t = 16384
+                maxViewportDimensions[1]:       uint32_t = 16384
+            viewportBoundsRange:            float[2] = 0000002C5CD5E838
+                viewportBoundsRange[0]:         float = -32768
+                viewportBoundsRange[1]:         float = 32767
+            viewportSubPixelBits:           uint32_t = 8
+            minMemoryMapAlignment:          size_t = 64
+            minTexelBufferOffsetAlignment:  VkDeviceSize = 1
+            minUniformBufferOffsetAlignment: VkDeviceSize = 16
+            minStorageBufferOffsetAlignment: VkDeviceSize = 4
+            minTexelOffset:                 int32_t = -64
+            maxTexelOffset:                 uint32_t = 63
+            minTexelGatherOffset:           int32_t = -32
+            maxTexelGatherOffset:           uint32_t = 31
+            minInterpolationOffset:         float = -2
+            maxInterpolationOffset:         float = 2
+            subPixelInterpolationOffsetBits: uint32_t = 8
+            maxFramebufferWidth:            uint32_t = 16384
+            maxFramebufferHeight:           uint32_t = 16384
+            maxFramebufferLayers:           uint32_t = 2048
+            framebufferColorSampleCounts:   VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferDepthSampleCounts:   VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferStencilSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferNoAttachmentsSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            maxColorAttachments:            uint32_t = 8
+            sampledImageColorSampleCounts:  VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageIntegerSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageDepthSampleCounts:  VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageStencilSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            storageImageSampleCounts:       VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            maxSampleMaskWords:             uint32_t = 1
+            timestampComputeAndGraphics:    VkBool32 = 1
+            timestampPeriod:                float = 40
+            maxClipDistances:               uint32_t = 8
+            maxCullDistances:               uint32_t = 8
+            maxCombinedClipAndCullDistances: uint32_t = 8
+            discreteQueuePriorities:        uint32_t = 2
+            pointSizeRange:                 float[2] = 0000002C5CD5E8D4
+                pointSizeRange[0]:              float = 0
+                pointSizeRange[1]:              float = 8191.88
+            lineWidthRange:                 float[2] = 0000002C5CD5E8DC
+                lineWidthRange[0]:              float = 0
+                lineWidthRange[1]:              float = 8191.88
+            pointSizeGranularity:           float = 0.125
+            lineWidthGranularity:           float = 0.125
+            strictLines:                    VkBool32 = 0
+            standardSampleLocations:        VkBool32 = 1
+            optimalBufferCopyOffsetAlignment: VkDeviceSize = 1
+            optimalBufferCopyRowPitchAlignment: VkDeviceSize = 1
+            nonCoherentAtomSize:            VkDeviceSize = 128
+        sparseProperties:               VkPhysicalDeviceSparseProperties = 0000002C5CD5E910:
+            residencyStandard2DBlockShape:  VkBool32 = 1
+            residencyStandard2DMultisampleBlockShape: VkBool32 = 0
+            residencyStandard3DBlockShape:  VkBool32 = 1
+            residencyAlignedMipSize:        VkBool32 = 0
+            residencyNonResidentStrict:     VkBool32 = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pQueueFamilyPropertyCount:      uint32_t* = 3
+    pQueueFamilyProperties:         VkQueueFamilyProperties* = NULL
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pQueueFamilyPropertyCount:      uint32_t* = 3
+    pQueueFamilyProperties:         VkQueueFamilyProperties* = 000001833F6EC650
+        pQueueFamilyProperties[0]:      VkQueueFamilyProperties = 000001833F6EC650:
+            queueFlags:                     VkQueueFlags = 15 (VK_QUEUE_GRAPHICS_BIT | VK_QUEUE_COMPUTE_BIT | VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 1
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 000001833F6EC65C:
+                width:                          uint32_t = 1
+                height:                         uint32_t = 1
+                depth:                          uint32_t = 1
+        pQueueFamilyProperties[1]:      VkQueueFamilyProperties = 000001833F6EC668:
+            queueFlags:                     VkQueueFlags = 14 (VK_QUEUE_COMPUTE_BIT | VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 2
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 000001833F6EC674:
+                width:                          uint32_t = 1
+                height:                         uint32_t = 1
+                depth:                          uint32_t = 1
+        pQueueFamilyProperties[2]:      VkQueueFamilyProperties = 000001833F6EC680:
+            queueFlags:                     VkQueueFlags = 12 (VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 1
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 000001833F6EC68C:
+                width:                          uint32_t = 16
+                height:                         uint32_t = 16
+                depth:                          uint32_t = 8
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceMemoryProperties(physicalDevice, pMemoryProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pMemoryProperties:              VkPhysicalDeviceMemoryProperties* = 0000018346015AC0:
+        memoryTypeCount:                uint32_t = 4
+        memoryTypes:                    VkMemoryType[VK_MAX_MEMORY_TYPES] = 0000018346015AC4
+            memoryTypes[0]:                 VkMemoryType = 0000018346015AC4:
+                propertyFlags:                  VkMemoryPropertyFlags = 1 (VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT)
+                heapIndex:                      uint32_t = 0
+            memoryTypes[1]:                 VkMemoryType = 0000018346015ACC:
+                propertyFlags:                  VkMemoryPropertyFlags = 6 (VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT)
+                heapIndex:                      uint32_t = 1
+            memoryTypes[2]:                 VkMemoryType = 0000018346015AD4:
+                propertyFlags:                  VkMemoryPropertyFlags = 7 (VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT | VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT)
+                heapIndex:                      uint32_t = 2
+            memoryTypes[3]:                 VkMemoryType = 0000018346015ADC:
+                propertyFlags:                  VkMemoryPropertyFlags = 14 (VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT | VK_MEMORY_PROPERTY_HOST_CACHED_BIT)
+                heapIndex:                      uint32_t = 1
+        memoryHeapCount:                uint32_t = 3
+        memoryHeaps:                    VkMemoryHeap[VK_MAX_MEMORY_HEAPS] = 0000018346015BC8
+            memoryHeaps[0]:                 VkMemoryHeap = 0000018346015BC8:
+                size:                           VkDeviceSize = 805306368
+                flags:                          VkMemoryHeapFlags = 3 (VK_MEMORY_HEAP_DEVICE_LOCAL_BIT | VK_MEMORY_HEAP_MULTI_INSTANCE_BIT)
+            memoryHeaps[1]:                 VkMemoryHeap = 0000018346015BD8:
+                size:                           VkDeviceSize = 3437494272
+                flags:                          VkMemoryHeapFlags = 0
+            memoryHeaps[2]:                 VkMemoryHeap = 0000018346015BE8:
+                size:                           VkDeviceSize = 268435456
+                flags:                          VkMemoryHeapFlags = 3 (VK_MEMORY_HEAP_DEVICE_LOCAL_BIT | VK_MEMORY_HEAP_MULTI_INSTANCE_BIT)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceProperties(physicalDevice, pProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pProperties:                    VkPhysicalDeviceProperties* = 0000018346015CC8:
+        apiVersion:                     uint32_t = 4198508
+        driverVersion:                  uint32_t = 8388699
+        vendorID:                       uint32_t = 4098
+        deviceID:                       uint32_t = 5597
+        deviceType:                     VkPhysicalDeviceType = VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU (1)
+        deviceName:                     char[VK_MAX_PHYSICAL_DEVICE_NAME_SIZE] = "AMD Radeon(TM) Vega 8 Graphics"
+        pipelineCacheUUID:              uint8_t[VK_UUID_SIZE] = 0000018346015DDC
+            pipelineCacheUUID[0]:           uint8_t = 2
+            pipelineCacheUUID[1]:           uint8_t = 16
+            pipelineCacheUUID[2]:           uint8_t = 0
+            pipelineCacheUUID[3]:           uint8_t = 0
+            pipelineCacheUUID[4]:           uint8_t = 221
+            pipelineCacheUUID[5]:           uint8_t = 21
+            pipelineCacheUUID[6]:           uint8_t = 0
+            pipelineCacheUUID[7]:           uint8_t = 0
+            pipelineCacheUUID[8]:           uint8_t = 246
+            pipelineCacheUUID[9]:           uint8_t = 1
+            pipelineCacheUUID[10]:          uint8_t = 0
+            pipelineCacheUUID[11]:          uint8_t = 1
+            pipelineCacheUUID[12]:          uint8_t = 25
+            pipelineCacheUUID[13]:          uint8_t = 162
+            pipelineCacheUUID[14]:          uint8_t = 92
+            pipelineCacheUUID[15]:          uint8_t = 199
+        limits:                         VkPhysicalDeviceLimits = 0000018346015DF0:
+            maxImageDimension1D:            uint32_t = 16384
+            maxImageDimension2D:            uint32_t = 16384
+            maxImageDimension3D:            uint32_t = 2048
+            maxImageDimensionCube:          uint32_t = 16384
+            maxImageArrayLayers:            uint32_t = 2048
+            maxTexelBufferElements:         uint32_t = 4294967295
+            maxUniformBufferRange:          uint32_t = 4294967295
+            maxStorageBufferRange:          uint32_t = 4294967295
+            maxPushConstantsSize:           uint32_t = 128
+            maxMemoryAllocationCount:       uint32_t = 4096
+            maxSamplerAllocationCount:      uint32_t = 1048576
+            bufferImageGranularity:         VkDeviceSize = 1
+            sparseAddressSpaceSize:         VkDeviceSize = 17579301142528
+            maxBoundDescriptorSets:         uint32_t = 32
+            maxPerStageDescriptorSamplers:  uint32_t = 4294967295
+            maxPerStageDescriptorUniformBuffers: uint32_t = 4294967295
+            maxPerStageDescriptorStorageBuffers: uint32_t = 4294967295
+            maxPerStageDescriptorSampledImages: uint32_t = 4294967295
+            maxPerStageDescriptorStorageImages: uint32_t = 4294967295
+            maxPerStageDescriptorInputAttachments: uint32_t = 4294967295
+            maxPerStageResources:           uint32_t = 4294967295
+            maxDescriptorSetSamplers:       uint32_t = 4294967295
+            maxDescriptorSetUniformBuffers: uint32_t = 4294967295
+            maxDescriptorSetUniformBuffersDynamic: uint32_t = 8
+            maxDescriptorSetStorageBuffers: uint32_t = 4294967295
+            maxDescriptorSetStorageBuffersDynamic: uint32_t = 8
+            maxDescriptorSetSampledImages:  uint32_t = 4294967295
+            maxDescriptorSetStorageImages:  uint32_t = 4294967295
+            maxDescriptorSetInputAttachments: uint32_t = 4294967295
+            maxVertexInputAttributes:       uint32_t = 64
+            maxVertexInputBindings:         uint32_t = 32
+            maxVertexInputAttributeOffset:  uint32_t = 4294967295
+            maxVertexInputBindingStride:    uint32_t = 16383
+            maxVertexOutputComponents:      uint32_t = 128
+            maxTessellationGenerationLevel: uint32_t = 64
+            maxTessellationPatchSize:       uint32_t = 32
+            maxTessellationControlPerVertexInputComponents: uint32_t = 128
+            maxTessellationControlPerVertexOutputComponents: uint32_t = 128
+            maxTessellationControlPerPatchOutputComponents: uint32_t = 120
+            maxTessellationControlTotalOutputComponents: uint32_t = 4096
+            maxTessellationEvaluationInputComponents: uint32_t = 128
+            maxTessellationEvaluationOutputComponents: uint32_t = 128
+            maxGeometryShaderInvocations:   uint32_t = 127
+            maxGeometryInputComponents:     uint32_t = 128
+            maxGeometryOutputComponents:    uint32_t = 128
+            maxGeometryOutputVertices:      uint32_t = 1024
+            maxGeometryTotalOutputComponents: uint32_t = 16384
+            maxFragmentInputComponents:     uint32_t = 128
+            maxFragmentOutputAttachments:   uint32_t = 8
+            maxFragmentDualSrcAttachments:  uint32_t = 1
+            maxFragmentCombinedOutputResources: uint32_t = 4294967295
+            maxComputeSharedMemorySize:     uint32_t = 32768
+            maxComputeWorkGroupCount:       uint32_t[3] = 0000018346015ECC
+                maxComputeWorkGroupCount[0]:    uint32_t = 65535
+                maxComputeWorkGroupCount[1]:    uint32_t = 65535
+                maxComputeWorkGroupCount[2]:    uint32_t = 65535
+            maxComputeWorkGroupInvocations: uint32_t = 1024
+            maxComputeWorkGroupSize:        uint32_t[3] = 0000018346015EDC
+                maxComputeWorkGroupSize[0]:     uint32_t = 1024
+                maxComputeWorkGroupSize[1]:     uint32_t = 1024
+                maxComputeWorkGroupSize[2]:     uint32_t = 1024
+            subPixelPrecisionBits:          uint32_t = 8
+            subTexelPrecisionBits:          uint32_t = 8
+            mipmapPrecisionBits:            uint32_t = 8
+            maxDrawIndexedIndexValue:       uint32_t = 4294967295
+            maxDrawIndirectCount:           uint32_t = 4294967295
+            maxSamplerLodBias:              float = 15.9961
+            maxSamplerAnisotropy:           float = 16
+            maxViewports:                   uint32_t = 16
+            maxViewportDimensions:          uint32_t[2] = 0000018346015F08
+                maxViewportDimensions[0]:       uint32_t = 16384
+                maxViewportDimensions[1]:       uint32_t = 16384
+            viewportBoundsRange:            float[2] = 0000018346015F10
+                viewportBoundsRange[0]:         float = -32768
+                viewportBoundsRange[1]:         float = 32767
+            viewportSubPixelBits:           uint32_t = 8
+            minMemoryMapAlignment:          size_t = 64
+            minTexelBufferOffsetAlignment:  VkDeviceSize = 1
+            minUniformBufferOffsetAlignment: VkDeviceSize = 16
+            minStorageBufferOffsetAlignment: VkDeviceSize = 4
+            minTexelOffset:                 int32_t = -64
+            maxTexelOffset:                 uint32_t = 63
+            minTexelGatherOffset:           int32_t = -32
+            maxTexelGatherOffset:           uint32_t = 31
+            minInterpolationOffset:         float = -2
+            maxInterpolationOffset:         float = 2
+            subPixelInterpolationOffsetBits: uint32_t = 8
+            maxFramebufferWidth:            uint32_t = 16384
+            maxFramebufferHeight:           uint32_t = 16384
+            maxFramebufferLayers:           uint32_t = 2048
+            framebufferColorSampleCounts:   VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferDepthSampleCounts:   VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferStencilSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            framebufferNoAttachmentsSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            maxColorAttachments:            uint32_t = 8
+            sampledImageColorSampleCounts:  VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageIntegerSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageDepthSampleCounts:  VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            sampledImageStencilSampleCounts: VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            storageImageSampleCounts:       VkSampleCountFlags = 15 (VK_SAMPLE_COUNT_1_BIT | VK_SAMPLE_COUNT_2_BIT | VK_SAMPLE_COUNT_4_BIT | VK_SAMPLE_COUNT_8_BIT)
+            maxSampleMaskWords:             uint32_t = 1
+            timestampComputeAndGraphics:    VkBool32 = 1
+            timestampPeriod:                float = 40
+            maxClipDistances:               uint32_t = 8
+            maxCullDistances:               uint32_t = 8
+            maxCombinedClipAndCullDistances: uint32_t = 8
+            discreteQueuePriorities:        uint32_t = 2
+            pointSizeRange:                 float[2] = 0000018346015FAC
+                pointSizeRange[0]:              float = 0
+                pointSizeRange[1]:              float = 8191.88
+            lineWidthRange:                 float[2] = 0000018346015FB4
+                lineWidthRange[0]:              float = 0
+                lineWidthRange[1]:              float = 8191.88
+            pointSizeGranularity:           float = 0.125
+            lineWidthGranularity:           float = 0.125
+            strictLines:                    VkBool32 = 0
+            standardSampleLocations:        VkBool32 = 1
+            optimalBufferCopyOffsetAlignment: VkDeviceSize = 1
+            optimalBufferCopyRowPitchAlignment: VkDeviceSize = 1
+            nonCoherentAtomSize:            VkDeviceSize = 128
+        sparseProperties:               VkPhysicalDeviceSparseProperties = 0000018346015FE8:
+            residencyStandard2DBlockShape:  VkBool32 = 1
+            residencyStandard2DMultisampleBlockShape: VkBool32 = 0
+            residencyStandard3DBlockShape:  VkBool32 = 1
+            residencyAlignedMipSize:        VkBool32 = 0
+            residencyNonResidentStrict:     VkBool32 = 1
+
+Thread 0, Frame 0:
+vkGetDeviceQueue(device, queueFamilyIndex, queueIndex, pQueue) returns void:
+    device:                         VkDevice = 0000018345F554C0
+    queueFamilyIndex:               uint32_t = 0
+    queueIndex:                     uint32_t = 0
+    pQueue:                         VkQueue* = 0000018345F656C8
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceCapabilitiesKHR(physicalDevice, surface, pSurfaceCapabilities) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSurfaceCapabilities:           VkSurfaceCapabilitiesKHR* = 0000002C5CD5F070:
+        minImageCount:                  uint32_t = 1
+        maxImageCount:                  uint32_t = 16
+        currentExtent:                  VkExtent2D = 0000002C5CD5F078:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        minImageExtent:                 VkExtent2D = 0000002C5CD5F080:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        maxImageExtent:                 VkExtent2D = 0000002C5CD5F088:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        maxImageArrayLayers:            uint32_t = 1
+        supportedTransforms:            VkSurfaceTransformFlagsKHR = 1 (VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR)
+        currentTransform:               VkSurfaceTransformFlagBitsKHR = 1 (VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR)
+        supportedCompositeAlpha:        VkCompositeAlphaFlagsKHR = 1 (VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR)
+        supportedUsageFlags:            VkImageUsageFlags = 159 (VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, pSurfaceFormatCount, pSurfaceFormats) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSurfaceFormatCount:            uint32_t* = 20
+    pSurfaceFormats:                VkSurfaceFormatKHR* = NULL
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, pSurfaceFormatCount, pSurfaceFormats) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSurfaceFormatCount:            uint32_t* = 20
+    pSurfaceFormats:                VkSurfaceFormatKHR* = 000001833FA86800
+        pSurfaceFormats[0]:             VkSurfaceFormatKHR = 000001833FA86800:
+            format:                         VkFormat = VK_FORMAT_B8G8R8A8_UNORM (44)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[1]:             VkSurfaceFormatKHR = 000001833FA86808:
+            format:                         VkFormat = VK_FORMAT_B8G8R8A8_SNORM (45)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[2]:             VkSurfaceFormatKHR = 000001833FA86810:
+            format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[3]:             VkSurfaceFormatKHR = 000001833FA86818:
+            format:                         VkFormat = VK_FORMAT_R16G16B16A16_UNORM (91)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[4]:             VkSurfaceFormatKHR = 000001833FA86820:
+            format:                         VkFormat = VK_FORMAT_R16G16B16A16_SNORM (92)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[5]:             VkSurfaceFormatKHR = 000001833FA86828:
+            format:                         VkFormat = VK_FORMAT_R16G16B16A16_SFLOAT (97)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[6]:             VkSurfaceFormatKHR = 000001833FA86830:
+            format:                         VkFormat = VK_FORMAT_A2R10G10B10_UNORM_PACK32 (58)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[7]:             VkSurfaceFormatKHR = 000001833FA86838:
+            format:                         VkFormat = VK_FORMAT_A2B10G10R10_UNORM_PACK32 (64)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[8]:             VkSurfaceFormatKHR = 000001833FA86840:
+            format:                         VkFormat = VK_FORMAT_B10G11R11_UFLOAT_PACK32 (122)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[9]:             VkSurfaceFormatKHR = 000001833FA86848:
+            format:                         VkFormat = VK_FORMAT_R8G8B8A8_UNORM (37)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[10]:            VkSurfaceFormatKHR = 000001833FA86850:
+            format:                         VkFormat = VK_FORMAT_A8B8G8R8_UNORM_PACK32 (51)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[11]:            VkSurfaceFormatKHR = 000001833FA86858:
+            format:                         VkFormat = VK_FORMAT_R8G8B8A8_SNORM (38)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[12]:            VkSurfaceFormatKHR = 000001833FA86860:
+            format:                         VkFormat = VK_FORMAT_R8G8B8A8_SRGB (43)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[13]:            VkSurfaceFormatKHR = 000001833FA86868:
+            format:                         VkFormat = VK_FORMAT_A8B8G8R8_SNORM_PACK32 (52)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[14]:            VkSurfaceFormatKHR = 000001833FA86870:
+            format:                         VkFormat = VK_FORMAT_A8B8G8R8_SRGB_PACK32 (57)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[15]:            VkSurfaceFormatKHR = 000001833FA86878:
+            format:                         VkFormat = VK_FORMAT_R5G6B5_UNORM_PACK16 (4)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[16]:            VkSurfaceFormatKHR = 000001833FA86880:
+            format:                         VkFormat = VK_FORMAT_B5G6R5_UNORM_PACK16 (5)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[17]:            VkSurfaceFormatKHR = 000001833FA86888:
+            format:                         VkFormat = VK_FORMAT_A1R5G5B5_UNORM_PACK16 (8)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[18]:            VkSurfaceFormatKHR = 000001833FA86890:
+            format:                         VkFormat = VK_FORMAT_R4G4B4A4_UNORM_PACK16 (2)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        pSurfaceFormats[19]:            VkSurfaceFormatKHR = 000001833FA86898:
+            format:                         VkFormat = VK_FORMAT_B4G4R4A4_UNORM_PACK16 (3)
+            colorSpace:                     VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, pPresentModeCount, pPresentModes) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pPresentModeCount:              uint32_t* = 3
+    pPresentModes:                  VkPresentModeKHR* = NULL
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, pPresentModeCount, pPresentModes) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pPresentModeCount:              uint32_t* = 3
+    pPresentModes:                  VkPresentModeKHR* = 000001833F6EBEB0
+        pPresentModes[0]:               VkPresentModeKHR = VK_PRESENT_MODE_IMMEDIATE_KHR (0)
+        pPresentModes[1]:               VkPresentModeKHR = VK_PRESENT_MODE_FIFO_KHR (2)
+        pPresentModes[2]:               VkPresentModeKHR = VK_PRESENT_MODE_FIFO_RELAXED_KHR (3)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pQueueFamilyPropertyCount:      uint32_t* = 3
+    pQueueFamilyProperties:         VkQueueFamilyProperties* = NULL
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    pQueueFamilyPropertyCount:      uint32_t* = 3
+    pQueueFamilyProperties:         VkQueueFamilyProperties* = 0000018346341FC0
+        pQueueFamilyProperties[0]:      VkQueueFamilyProperties = 0000018346341FC0:
+            queueFlags:                     VkQueueFlags = 15 (VK_QUEUE_GRAPHICS_BIT | VK_QUEUE_COMPUTE_BIT | VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 1
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 0000018346341FCC:
+                width:                          uint32_t = 1
+                height:                         uint32_t = 1
+                depth:                          uint32_t = 1
+        pQueueFamilyProperties[1]:      VkQueueFamilyProperties = 0000018346341FD8:
+            queueFlags:                     VkQueueFlags = 14 (VK_QUEUE_COMPUTE_BIT | VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 2
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 0000018346341FE4:
+                width:                          uint32_t = 1
+                height:                         uint32_t = 1
+                depth:                          uint32_t = 1
+        pQueueFamilyProperties[2]:      VkQueueFamilyProperties = 0000018346341FF0:
+            queueFlags:                     VkQueueFlags = 12 (VK_QUEUE_TRANSFER_BIT | VK_QUEUE_SPARSE_BINDING_BIT)
+            queueCount:                     uint32_t = 1
+            timestampValidBits:             uint32_t = 64
+            minImageTransferGranularity:    VkExtent3D = 0000018346341FFC:
+                width:                          uint32_t = 16
+                height:                         uint32_t = 16
+                depth:                          uint32_t = 8
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    queueFamilyIndex:               uint32_t = 0
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSupported:                     VkBool32* = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    queueFamilyIndex:               uint32_t = 1
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSupported:                     VkBool32* = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    queueFamilyIndex:               uint32_t = 2
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSupported:                     VkBool32* = 1
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceSurfaceCapabilitiesKHR(physicalDevice, surface, pSurfaceCapabilities) returns VkResult VK_SUCCESS (0):
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pSurfaceCapabilities:           VkSurfaceCapabilitiesKHR* = 0000002C5CD5ED00:
+        minImageCount:                  uint32_t = 1
+        maxImageCount:                  uint32_t = 16
+        currentExtent:                  VkExtent2D = 0000002C5CD5ED08:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        minImageExtent:                 VkExtent2D = 0000002C5CD5ED10:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        maxImageExtent:                 VkExtent2D = 0000002C5CD5ED18:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        maxImageArrayLayers:            uint32_t = 1
+        supportedTransforms:            VkSurfaceTransformFlagsKHR = 1 (VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR)
+        currentTransform:               VkSurfaceTransformFlagBitsKHR = 1 (VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR)
+        supportedCompositeAlpha:        VkCompositeAlphaFlagsKHR = 1 (VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR)
+        supportedUsageFlags:            VkImageUsageFlags = 159 (VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT)
+
+Thread 0, Frame 0:
+vkCreateSwapchainKHR(device, pCreateInfo, pAllocator, pSwapchain) returns VkResult VK_SUCCESS (0):
+    device:                         VkDevice = 0000018345F554C0
+    pCreateInfo:                    const VkSwapchainCreateInfoKHR* = 000001833F990750:
+        sType:                          VkStructureType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR (1000001000)
+        pNext:                          const void* = NULL
+        flags:                          VkSwapchainCreateFlagsKHR = 0
+        surface:                        VkSurfaceKHR = 000001833F6EC920
+        minImageCount:                  uint32_t = 2
+        imageFormat:                    VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+        imageColorSpace:                VkColorSpaceKHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR (0)
+        imageExtent:                    VkExtent2D = 000001833F99077C:
+            width:                          uint32_t = 800
+            height:                         uint32_t = 600
+        imageArrayLayers:               uint32_t = 1
+        imageUsage:                     VkImageUsageFlags = 16 (VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT)
+        imageSharingMode:               VkSharingMode = VK_SHARING_MODE_CONCURRENT (1)
+        queueFamilyIndexCount:          uint32_t = 2
+        pQueueFamilyIndices:            const uint32_t* = 000001833CBDD6F0
+            pQueueFamilyIndices[0]:         const uint32_t = 0
+            pQueueFamilyIndices[1]:         const uint32_t = 2
+        preTransform:                   VkSurfaceTransformFlagBitsKHR = 1 (VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR)
+        compositeAlpha:                 VkCompositeAlphaFlagBitsKHR = 1 (VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR)
+        presentMode:                    VkPresentModeKHR = VK_PRESENT_MODE_FIFO_KHR (2)
+        clipped:                        VkBool32 = 1
+        oldSwapchain:                   VkSwapchainKHR = 0000000000000000
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+    pSwapchain:                     VkSwapchainKHR* = 000001833FAE20C0
+
+Thread 0, Frame 0:
+vkGetSwapchainImagesKHR(device, swapchain, pSwapchainImageCount, pSwapchainImages) returns VkResult VK_SUCCESS (0):
+    device:                         VkDevice = 0000018345F554C0
+    swapchain:                      VkSwapchainKHR = 000001833FAE20C0
+    pSwapchainImageCount:           uint32_t* = 2
+    pSwapchainImages:               VkImage* = NULL
+
+Thread 0, Frame 0:
+vkGetSwapchainImagesKHR(device, swapchain, pSwapchainImageCount, pSwapchainImages) returns VkResult VK_SUCCESS (0):
+    device:                         VkDevice = 0000018345F554C0
+    swapchain:                      VkSwapchainKHR = 000001833FAE20C0
+    pSwapchainImageCount:           uint32_t* = 2
+    pSwapchainImages:               VkImage* = 000001833F6EBDC0
+        pSwapchainImages[0]:            VkImage = 000001833FAE8D10
+        pSwapchainImages[1]:            VkImage = 000001833FA8AF40
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceFormatProperties(physicalDevice, format, pFormatProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+    pFormatProperties:              VkFormatProperties* = 0000002C5CD5EFB0:
+        linearTilingFeatures:           VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        optimalTilingFeatures:          VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        bufferFeatures:                 VkFormatFeatureFlags = 32 (VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_ATOMIC_BIT)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceFormatProperties(physicalDevice, format, pFormatProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+    pFormatProperties:              VkFormatProperties* = 0000002C5CD5EFB0:
+        linearTilingFeatures:           VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        optimalTilingFeatures:          VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        bufferFeatures:                 VkFormatFeatureFlags = 32 (VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_ATOMIC_BIT)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceFormatProperties(physicalDevice, format, pFormatProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+    pFormatProperties:              VkFormatProperties* = 0000002C5CD5EED8:
+        linearTilingFeatures:           VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        optimalTilingFeatures:          VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        bufferFeatures:                 VkFormatFeatureFlags = 32 (VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_ATOMIC_BIT)
+
+Thread 0, Frame 0:
+vkCreateImageView(device, pCreateInfo, pAllocator, pView) returns VkResult VK_SUCCESS (0):
+    device:                         VkDevice = 0000018345F554C0
+    pCreateInfo:                    const VkImageViewCreateInfo* = 0000002C5CD5F360:
+        sType:                          VkStructureType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO (15)
+        pNext:                          const void* = NULL
+        flags:                          VkImageViewCreateFlags = 0
+        image:                          VkImage = 000001833FAE8D10
+        viewType:                       VkImageViewType = VK_IMAGE_VIEW_TYPE_2D (1)
+        format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+        components:                     VkComponentMapping = 0000002C5CD5F388:
+            r:                              VkComponentSwizzle = VK_COMPONENT_SWIZZLE_IDENTITY (0)
+            g:                              VkComponentSwizzle = VK_COMPONENT_SWIZZLE_IDENTITY (0)
+            b:                              VkComponentSwizzle = VK_COMPONENT_SWIZZLE_IDENTITY (0)
+            a:                              VkComponentSwizzle = VK_COMPONENT_SWIZZLE_IDENTITY (0)
+        subresourceRange:               VkImageSubresourceRange = 0000002C5CD5F398:
+            aspectMask:                     VkImageAspectFlags = 1 (VK_IMAGE_ASPECT_COLOR_BIT)
+            baseMipLevel:                   uint32_t = 0
+            levelCount:                     uint32_t = 1
+            baseArrayLayer:                 uint32_t = 0
+            layerCount:                     uint32_t = 1
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+    pView:                          VkImageView* = 000001833FA6DDA0
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceFormatProperties(physicalDevice, format, pFormatProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+    pFormatProperties:              VkFormatProperties* = 0000002C5CD5F3B8:
+        linearTilingFeatures:           VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        optimalTilingFeatures:          VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        bufferFeatures:                 VkFormatFeatureFlags = 32 (VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_ATOMIC_BIT)
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceFormatProperties(physicalDevice, format, pFormatProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+    pFormatProperties:              VkFormatProperties* = 0000002C5CD5EED8:
+        linearTilingFeatures:           VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        optimalTilingFeatures:          VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        bufferFeatures:                 VkFormatFeatureFlags = 32 (VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_ATOMIC_BIT)
+
+Thread 0, Frame 0:
+vkCreateImageView(device, pCreateInfo, pAllocator, pView) returns VkResult VK_SUCCESS (0):
+    device:                         VkDevice = 0000018345F554C0
+    pCreateInfo:                    const VkImageViewCreateInfo* = 0000002C5CD5F360:
+        sType:                          VkStructureType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO (15)
+        pNext:                          const void* = NULL
+        flags:                          VkImageViewCreateFlags = 0
+        image:                          VkImage = 000001833FA8AF40
+        viewType:                       VkImageViewType = VK_IMAGE_VIEW_TYPE_2D (1)
+        format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+        components:                     VkComponentMapping = 0000002C5CD5F388:
+            r:                              VkComponentSwizzle = VK_COMPONENT_SWIZZLE_IDENTITY (0)
+            g:                              VkComponentSwizzle = VK_COMPONENT_SWIZZLE_IDENTITY (0)
+            b:                              VkComponentSwizzle = VK_COMPONENT_SWIZZLE_IDENTITY (0)
+            a:                              VkComponentSwizzle = VK_COMPONENT_SWIZZLE_IDENTITY (0)
+        subresourceRange:               VkImageSubresourceRange = 0000002C5CD5F398:
+            aspectMask:                     VkImageAspectFlags = 1 (VK_IMAGE_ASPECT_COLOR_BIT)
+            baseMipLevel:                   uint32_t = 0
+            levelCount:                     uint32_t = 1
+            baseArrayLayer:                 uint32_t = 0
+            layerCount:                     uint32_t = 1
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+    pView:                          VkImageView* = 000001833FA6DAC0
+
+Thread 0, Frame 0:
+vkGetPhysicalDeviceFormatProperties(physicalDevice, format, pFormatProperties) returns void:
+    physicalDevice:                 VkPhysicalDevice = 000001833F8C0960
+    format:                         VkFormat = VK_FORMAT_B8G8R8A8_SRGB (50)
+    pFormatProperties:              VkFormatProperties* = 0000002C5CD5F3B8:
+        linearTilingFeatures:           VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        optimalTilingFeatures:          VkFormatFeatureFlags = 122241 (VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BIT | VK_FORMAT_FEATURE_COLOR_ATTACHMENT_BLEND_BIT | VK_FORMAT_FEATURE_BLIT_SRC_BIT | VK_FORMAT_FEATURE_BLIT_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT | VK_FORMAT_FEATURE_TRANSFER_SRC_BIT | VK_FORMAT_FEATURE_TRANSFER_DST_BIT | VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_MINMAX_BIT)
+        bufferFeatures:                 VkFormatFeatureFlags = 32 (VK_FORMAT_FEATURE_STORAGE_TEXEL_BUFFER_ATOMIC_BIT)
+
+Thread 0, Frame 0:
+vkDestroyImageView(device, imageView, pAllocator) returns void:
+    device:                         VkDevice = 0000018345F554C0
+    imageView:                      VkImageView = 000001833FA6DDA0
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+
+Thread 0, Frame 0:
+vkDestroyImageView(device, imageView, pAllocator) returns void:
+    device:                         VkDevice = 0000018345F554C0
+    imageView:                      VkImageView = 000001833FA6DAC0
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+
+Thread 0, Frame 0:
+vkDestroySwapchainKHR(device, swapchain, pAllocator) returns void:
+    device:                         VkDevice = 0000018345F554C0
+    swapchain:                      VkSwapchainKHR = 000001833FAE20C0
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+
+Thread 0, Frame 0:
+vkDestroyDevice(device, pAllocator) returns void:
+    device:                         VkDevice = 0000018345F554C0
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+
+Thread 0, Frame 0:
+vkDestroySurfaceKHR(instance, surface, pAllocator) returns void:
+    instance:                       VkInstance = 000001833F4FC8B0
+    surface:                        VkSurfaceKHR = 000001833F6EC920
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+
+Thread 0, Frame 0:
+vkDestroyDebugUtilsMessengerEXT(instance, messenger, pAllocator) returns void:
+    instance:                       VkInstance = 000001833F4FC8B0
+    messenger:                      VkDebugUtilsMessengerEXT = 000001833CBDD7A0
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+
+Thread 0, Frame 0:
+vkDestroyInstance(instance, pAllocator) returns void:
+    instance:                       VkInstance = 000001833F4FC8B0
+    pAllocator:                     const VkAllocationCallbacks* = NULL
+
