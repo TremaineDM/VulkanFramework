@@ -155,18 +155,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math\MMath.cpp" />
     <ClCompile Include="math\VMath.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="Graphics.h" />
     <ClInclude Include="math\Matrix.h" />
     <ClInclude Include="math\MMath.h" />
     <ClInclude Include="math\Plane.h" />
     <ClInclude Include="math\Sphere.h" />
     <ClInclude Include="math\Vector.h" />
     <ClInclude Include="math\VMath.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="QueueFamilyIndices.h" />
+    <ClInclude Include="SwapChainDetails.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="UniformBufferObject.h" />
+    <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\Fragment.frag" />
