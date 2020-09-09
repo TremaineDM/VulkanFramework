@@ -1,6 +1,14 @@
 #include "Model.h"
 #include <tiny_obj_loader.h>
 
+void Model::Init(std::string modelPath, std::string texPath)
+{
+	LoadModel(modelPath);
+	texture.CreateTextureImage(texPath);
+	texture.CreateImageView(VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_ASPECT_COLOR_BIT);
+	texture.CreateTextureSampler();
+}
+
 void Model::LoadModel(std::string modelPath)
 {
 	tinyobj::attrib_t attrib;

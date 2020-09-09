@@ -10,6 +10,7 @@ public:
 	std::vector<uint32_t> indices;
 	Texture texture;
 
+	void Init(std::string modelPath, std::string texPath);
 	void LoadModel(std::string modelPath);
 };
 

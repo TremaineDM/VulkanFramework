@@ -3,23 +3,25 @@
 #include <stdexcept>
 #include <cstdlib>
 
-#include "GameManager.h"
+#include "GraphicsEngine.h"
 
 int main()
 {
-	GameManager game;
+	GraphicsEngine* game = GraphicsEngine::GetInstance();
 
 	system("cmd.exe /c C:\\Users\\light\\Desktop\\CODING_PROGRAMMING\\Humber_Projects\\C++\\VulkanFramework\\shaders\\shaderCompile.bat");
 
 	try
 	{
-		game.Run();
+		game->Run();
 	}
 	catch (const std::exception & e)
 	{
 		std::cerr << e.what() << std::endl;
 		return EXIT_FAILURE;
 	}
+
+	game->RemoveInstance();
 
 	return EXIT_SUCCESS;
 }

@@ -154,8 +154,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Buffer.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GraphicsEngine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math\MMath.cpp" />
     <ClCompile Include="math\VMath.cpp" />
@@ -164,8 +166,10 @@
     <ClCompile Include="Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Buffer.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="GameManager.h" />
-    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GraphicsEngine.h" />
     <ClInclude Include="math\Matrix.h" />
     <ClInclude Include="math\MMath.h" />
     <ClInclude Include="math\Plane.h" />
