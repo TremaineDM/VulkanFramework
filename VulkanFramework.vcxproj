@@ -103,13 +103,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\glfw-3.3.2.bin.WIN64\include;C:\VulkanSDK\1.2.141.2\Include;C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\stb-master;C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\tinyobjloader-master;C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\C++\VulkanFramework\math;C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/src;$(SolutionDir)/external/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\VulkanSDK\1.2.141.2\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\external\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -141,7 +141,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\glfw-3.3.2.bin.WIN64\include;C:\VulkanSDK\1.2.141.2\Include;C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\stb-master;C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\tinyobjloader-master;C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\C++\VulkanFramework\math;C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/src;$(SolutionDir)/external/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -149,39 +149,25 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\light\Desktop\CODING_PROGRAMMING\Humber_Projects\Libraries\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\VulkanSDK\1.2.141.2\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\external\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Buffer.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="GraphicsEngine.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="math\MMath.cpp" />
-    <ClCompile Include="math\VMath.cpp" />
-    <ClCompile Include="Model.cpp" />
-    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="src\core\main.cpp" />
+    <ClCompile Include="src\graphics\Model.cpp" />
+    <ClCompile Include="src\graphics\Texture.cpp" />
     <ClCompile Include="Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Buffer.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="GameManager.h" />
-    <ClInclude Include="GraphicsEngine.h" />
-    <ClInclude Include="math\Matrix.h" />
-    <ClInclude Include="math\MMath.h" />
-    <ClInclude Include="math\Plane.h" />
-    <ClInclude Include="math\Sphere.h" />
-    <ClInclude Include="math\Vector.h" />
-    <ClInclude Include="math\VMath.h" />
-    <ClInclude Include="Model.h" />
-    <ClInclude Include="QueueFamilyIndices.h" />
-    <ClInclude Include="SwapChainDetails.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="UniformBufferObject.h" />
-    <ClInclude Include="Vertex.h" />
+    <ClInclude Include="src\core\GraphicsEngine.h" />
+    <ClInclude Include="src\core\PhysicsEngine.h" />
+    <ClInclude Include="src\graphics\Model.h" />
+    <ClInclude Include="src\graphics\Texture.h" />
+    <ClInclude Include="Vertex.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\Fragment.frag" />
