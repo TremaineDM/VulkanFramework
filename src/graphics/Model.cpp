@@ -1,5 +1,4 @@
 #include "Model.h"
-#include <tiny_obj_loader.h>
 
 //void Model::Init(std::string modelPath, std::string texPath)
 //{
@@ -52,3 +51,10 @@
 //		}
 //	}
 //}
+
+Model::Model(const std::vector<Vertex>& vertices, const std::vector<uint32_t>& indices, const std::vector<Texture>& textures)
+{
+	this->vertices = vertices;
+	this->indices = indices;
+
+}

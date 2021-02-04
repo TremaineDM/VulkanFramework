@@ -8,11 +8,12 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/hash.hpp>
 
-#define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include <sdl/SDL.h>
+#include <sdl/SDL_image.h>
 
-#define TINYOBJLOADER_IMPLEMENTATION
-#include <tiny_obj_loader.h>
+#include <assimp/Importer.hpp>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
 
 #include <iostream>
 #include <fstream>
@@ -28,7 +29,7 @@
 #include <set>
 #include <unordered_map>
 
-#include "graphics/Vertex.h"
+#include "graphics/Model.h"
 
 const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
@@ -141,6 +142,7 @@ private:
     VkImageView textureImageView;
     VkSampler textureSampler;
 
+    std::vector<Model> models;
     std::vector<Vertex> vertices;
     std::vector<uint32_t> indices;
     VkBuffer vertexBuffer;
@@ -166,6 +168,11 @@ private:
 
     void InitWindow() {
         glfwInit();
+        SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS);
+        if (IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG) == 0)
+        {
+            std::cout << "Error with SDL2_image init" << std::endl;
+        }
 
         glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
@@ -608,8 +615,8 @@ private:
     }
 
     void createGraphicsPipeline() {
-        auto vertShaderCode = readFile("shaders/vert.spv");
-        auto fragShaderCode = readFile("shaders/frag.spv");
+        auto vertShaderCode = readFile("shaders/Vertex.spv");
+        auto fragShaderCode = readFile("shaders/Fragment.spv");
 
         VkShaderModule vertShaderModule = createShaderModule(vertShaderCode);
         VkShaderModule fragShaderModule = createShaderModule(fragShaderCode);
@@ -814,12 +821,17 @@ private:
     }
 
     void createTextureImage() {
-        int texWidth, texHeight, texChannels;
-        stbi_uc* pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
-        VkDeviceSize imageSize = texWidth * texHeight * 4;
+        int32_t texWidth, texHeight;
+        SDL_Surface* tempImage = IMG_Load(TEXTURE_PATH.c_str());
+        SDL_Surface* image = SDL_ConvertSurfaceFormat(tempImage, tempImage->format->format, SDL_SWSURFACE);
+
+        texWidth = image->w;
+        texHeight = image->h;
+        //stbi_uc* image = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
+        VkDeviceSize imageSize = texWidth * texHeight * image->format->BytesPerPixel;
         mipLevels = static_cast<uint32_t>(std::floor(std::log2(std::max(texWidth, texHeight)))) + 1;
 
-        if (!pixels) {
+        if (!image) {
             throw std::runtime_error("failed to load texture image!");
         }
 
@@ -829,12 +841,13 @@ private:
 
         void* data;
         vkMapMemory(device, stagingBufferMemory, 0, imageSize, 0, &data);
-        memcpy(data, pixels, static_cast<size_t>(imageSize));
+        memcpy(data, image->pixels, static_cast<size_t>(imageSize));
         vkUnmapMemory(device, stagingBufferMemory);
 
-        stbi_image_free(pixels);
+        SDL_FreeSurface(image);
 
-        createImage(texWidth, texHeight, mipLevels, VK_SAMPLE_COUNT_1_BIT, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, textureImage, textureImageMemory);
+        createImage(texWidth, texHeight, mipLevels, VK_SAMPLE_COUNT_1_BIT, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_SAMPLED_BIT, 
+            VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, textureImage, textureImageMemory);
 
         transitionImageLayout(textureImage, VK_FORMAT_R8G8B8A8_SRGB, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, mipLevels);
         copyBufferToImage(stagingBuffer, textureImage, static_cast<uint32_t>(texWidth), static_cast<uint32_t>(texHeight));
@@ -1106,9 +1119,91 @@ private:
         endSingleTimeCommands(commandBuffer);
     }
 
+    Model ProcessMesh(aiMesh* mesh, const aiScene* scene)
+    {
+        std::vector<Vertex> modVertices;
+        std::vector<uint32_t> modIndices;
+        std::vector<Texture> modTextures;
+
+        //Load vertices
+        for (size_t i = 0; i < mesh->mNumVertices; i++)
+        {
+            Vertex vertex;
+
+            glm::vec3 vec;
+            vec.x = mesh->mVertices[i].x;
+            vec.y = mesh->mVertices[i].y;
+            vec.z = mesh->mVertices[i].z;
+            vertex.pos = vec;
+
+            //vec.x = mesh->mNormals[i].x;
+            //vec.y = mesh->mNormals[i].y;
+            //vec.z = mesh->mNormals[i].z;
+            //vertex.normal = vec;
+
+            if (mesh->mTextureCoords[0])
+            {
+                glm::vec2 uv;
+                uv.x = mesh->mTextureCoords[0][i].x;
+                uv.y = mesh->mTextureCoords[0][i].y;
+                vertex.texCoord = uv;
+            }
+            else
+            {
+                vertex.texCoord = glm::vec2(0.0f, 0.0f);
+            }
+            modVertices.push_back(vertex);
+        }
+
+        //Load indices
+        for (size_t i = 0; i < mesh->mNumFaces; i++)
+        {
+            aiFace face = mesh->mFaces[i];
+            for (size_t j = 0; j < face.mNumIndices; j++)
+            {
+                modIndices.push_back(face.mIndices[j]);
+            }
+        }
+
+        return Model(modVertices, modIndices, modTextures);
+    }
+
+    void ProcessNode(aiNode* node, const aiScene* scene)
+    {
+        for (size_t i = 0; i < node->mNumMeshes; i++)
+        {
+            aiMesh* mesh = scene->mMeshes[node->mMeshes[i]];
+            models.push_back(ProcessMesh(mesh, scene));
+        }
+
+        for (size_t i = 0; i < node->mNumChildren; i++)
+        {
+            ProcessNode(node->mChildren[i], scene);
+        }
+    }
+
     void loadModel() {
-        tinyobj::attrib_t attrib;
-        std::vector<tinyobj::shape_t> shapes;
+
+        Assimp::Importer importer;
+        const aiScene* scene = importer.ReadFile(MODEL_PATH.c_str(),
+            aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_JoinIdenticalVertices | aiProcess_OptimizeMeshes);
+
+        if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
+	    {
+		    std::cout << "ASSIMP error: " << importer.GetErrorString() << std::endl;
+		    return;
+        }
+
+    	ProcessNode(scene->mRootNode, scene);
+
+    	importer.FreeScene();
+	
+        vertices = models[0].vertices;
+        indices = models[0].indices;
+
+
+       /* tinyobj::attrib_t attrib;
+        std::vector<Vertex> shapes;
         std::vector<tinyobj::material_t> materials;
         std::string warn, err;
 
@@ -1142,7 +1237,7 @@ private:
 
                 indices.push_back(uniqueVertices[vertex]);
             }
-        }
+        }*/
     }
 
     void createVertexBuffer() {

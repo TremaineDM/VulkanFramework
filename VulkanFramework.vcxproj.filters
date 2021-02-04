@@ -43,7 +43,10 @@
     <ClCompile Include="src\core\main.cpp">
       <Filter>src\core</Filter>
     </ClCompile>
-    <ClCompile Include="Vertex.cpp">
+    <ClCompile Include="src\graphics\Vertex.cpp">
+      <Filter>src\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\Mesh.cpp">
       <Filter>src\graphics</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,7 +63,10 @@
     <ClInclude Include="src\core\PhysicsEngine.h">
       <Filter>src\core</Filter>
     </ClInclude>
-    <ClInclude Include="Vertex.h">
+    <ClInclude Include="src\graphics\Vertex.h">
+      <Filter>src\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\Mesh.h">
       <Filter>src\graphics</Filter>
     </ClInclude>
   </ItemGroup>

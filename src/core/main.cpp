@@ -2,14 +2,18 @@
 #include <iostream>
 #include <stdexcept>
 #include <cstdlib>
-
+#include <sdl/SDL_vulkan.h>
 #include "GraphicsEngine.h"
 
-int main()
+int main(int argc, char* argv[])
 {
 	GraphicsEngine* game = new GraphicsEngine;
 
-	system("cmd.exe /c C:\\Users\\light\\Desktop\\CODING_PROGRAMMING\\Humber_Projects\\C++\\VulkanFramework\\shaders\\shaderCompile.bat");
+	std::string path = "cmd.exe /c ";
+	path = path.append(SOLUTION_DIR);
+	path = path.append("\\shaders\\shaderCompile.bat");
+
+	system(path.c_str());
 
 	try
 	{
